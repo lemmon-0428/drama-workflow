@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-12 00:18:49",
+  "total": 4,
+  "success": 4,
+  "failed": 0,
+  "assets": [
+    {
+      "name": "su_leng",
+      "category": "character",
+      "path": "/Users/lemmon-428/Documents/michi/drama-workflow/docs/scripts/script1/assets/characters/su_leng.png",
+      "size": "1088x1920",
+      "status": "success"
+    },
+    {
+      "name": "luo_ye",
+      "category": "character",
+      "path": "/Users/lemmon-428/Documents/michi/drama-workflow/docs/scripts/script1/assets/characters/luo_ye.png",
+      "size": "1088x1920",
+      "status": "success"
+    },
+    {
+      "name": "zhao_yu",
+      "category": "character",
+      "path": "/Users/lemmon-428/Documents/michi/drama-workflow/docs/scripts/script1/assets/characters/zhao_yu.png",
+      "size": "1088x1920",
+      "status": "success"
+    },
+    {
+      "name": "gu_changzhou",
+      "category": "character",
+      "path": "/Users/lemmon-428/Documents/michi/drama-workflow/docs/scripts/script1/assets/characters/gu_changzhou.png",
+      "size": "1088x1920",
+      "status": "success"
+    }
+  ]
+}
