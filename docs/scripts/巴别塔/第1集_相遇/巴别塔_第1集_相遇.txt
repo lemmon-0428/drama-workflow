@@ -1,0 +1,79 @@
+《巴别塔》 第1集 · 相遇
+原始结构 / Act：第一幕：相遇  /  ACT ONE: THE MEETING
+时间码 / Timecode：[00:00 - 00:40]
+
+──────── 创作设定（全剧通用 / Style Notes）────────
+风格定位 / Style： 废土美学 × 心理惊悚 × 黑色寓言 / Wasteland Aesthetic × Psychological Thriller × Dark Fable
+视觉参考 / Visual Reference： 褪色的黄昏、金属锈蚀、车内幽闭空间的压抑感 / Faded twilight, rusted metal, the claustrophobic weight of a sealed cabin
+核心意象 / Core Image： 车 = 缩小的巴别塔 / The car = a miniature Tower of Babel
+
+──────── 正文 / Script ────────
+外景。废土公路。黄昏。
+EXT. WASTELAND HIGHWAY. DUSK.
+无尽黄沙。断裂的柏油路像一道黑色伤疤延伸至天际。
+Endless yellow sand. The fractured asphalt stretches like a black scar to the horizon.
+一辆改装过的钢铁战车轰鸣驶来——车身焊满防撞钢板，车窗是厚重的防弹玻璃，像一头负伤的野兽在喘息。
+A modified steel war-rig roars into view—armor plates welded to its body, windows of thick bulletproof glass, heaving like a wounded beast.
+内景。驾驶舱。
+INT. CABIN.
+司机 K（40岁，眼神像熄灭的火山，疲惫且冷漠）握着方向盘。副驾上，傀儡机器人静静坐着——铜铁拼接的身体，关节处露出精密齿轮，没有嘴巴，面容是一张被刻意打磨成微笑的金属面具。
+The driver, K (40s, eyes like dead volcanoes, exhausted and cold), grips the wheel. In the passenger seat sits a PUPPET ROBOT—body cobbled together from copper and iron, precision gears visible at the joints, no mouth, its face a metal mask deliberately hammered into a smile.
+（特写）机器人的手指微微动着，像在计算什么。
+(CLOSE-UP) The robot's fingers twitch slightly, as if calculating something.
+K (VO, 沙哑的独白)：
+K (V.O., hoarse monologue):
+"God said, 'Let there be light,' and there was light. Then, watching the tower nearly touch the heavens, He feared the unity of mortals and scrambled every tongue—thinking that would stop us from building Babel. He was wrong."
+“哦，上帝说要有光，于是有了光。后来眼看塔要触天了，他又畏惧凡人的团结，打乱所有人的语言，以为这样我们就建不成巴别塔了。但他想错了。”
+MAN:
+"Come on, spare us the old stories. Babel falls, and boom—nations, borders, civilizations everywhere..."
+男人：
+“嗨，别整那老掉牙的故事，巴别塔不倒，哪里来满世界的国家和文明.....”
+K (VO, 沙哑的独白)：
+K (V.O.):
+"Civilization..."
+文明...
+<闪回>
+车窗外，沙尘中浮现两个摇晃的人影。
+Through the windshield, two swaying figures emerge from the dust.
+男人（举着空弹的手枪，挥舞双臂）和女人（花掉的妆容，嘴唇干裂，眼神空洞）。
+A Man (waving an empty pistol, arms flailing) and a Woman (makeup smeared, cracked lips, hollow eyes).
+男人猛地冲到路中央，用身体挡住车道。
+The Man throws himself into the middle of the road, blocking the path with his body.
+MAN (eyes fierce, snarling):
+"Hit the brakes! Or I swear I'll blow your head off!"
+男人（目露凶光，嘶吼）：
+“踩刹车！不然老子崩了你！”
+车停下。防弹玻璃后，K的眼神冷漠如冰，根本没把那把枪放在眼里。
+The truck grinds to a halt. Behind the bulletproof glass, K's stare is arctic—he doesn't even dignify the gun with concern.
+WOMAN (throwing herself against the window, pounding the glass, voice hoarse):
+"Please, mister... three days without water... take me with you, I'll do anything..."
+女人（扑向车窗，拍打玻璃，声音嘶哑）：
+“求求大哥……三天没进水了……带上我，让我干什么都行……”
+K (eyes sweeping over her face, letting out a cold laugh):
+"Don't flatter yourself. You're not the last woman on Earth."
+K（目光扫过她的脸，发出一声冷笑）：
+“还真把自己当最后一个女人了。”
+男人敏锐地捕捉到这句话，眼中闪过一丝阴鸷。但他立刻换上油滑的笑脸，收起枪。
+The Man catches the remark. A flash of darkness crosses his eyes. But he immediately swaps it for a slick grin and holsters the gun.
+MAN:
+"Brother, anyone still breathing out here is family. Give us a lift. We'll watch your back."
+男人：
+“哥们儿，这世道能喘气的都是独苗。搭把手，路上算个照应。”
+K沉默。机器人发出轻微的“嘀”声，像在测量什么。
+K says nothing. The robot emits a soft "beep," as if measuring something.
+K (V.O.):
+"Same words on every tongue... and yet..."
+K（VO）：
+“就算都是人话，却再也没有....。”
+车门打开。两人上车。男人坐后排，把女人死死搂在怀里，像护着一块肉。
+The door opens. They climb in. The Man takes the back seat, clutching the Woman tight against him like a piece of meat he's guarding.
+K (glancing at the back seat through the rearview mirror, voice flat):
+"Rules on this rig: I stretch the fuel. You stretch your breath."
+K（透过后视镜瞥了后排一眼，声音没有起伏）：
+“上车有规矩：油我省着加，气你们省着喘。”
+MAN (slapping the back of K's seat, too hard, too familiar):
+"Got it! Next supply stop, I'm buying you a round of high-octane!"
+男人（大大咧咧地拍K的座椅后背）：
+“懂规矩！等到下个据点，兄弟我请你喝高标号的汽油！”
+无人笑。发动机低吼，战车继续向黄昏深处驶去。
+No one laughs. The engine growls. The war-rig lurches deeper into the dying light.

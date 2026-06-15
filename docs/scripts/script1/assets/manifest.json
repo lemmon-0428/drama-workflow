@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-12 00:18:49",
-  "total": 4,
-  "success": 4,
+  "generated_at": "2026-06-13 02:24:27",
+  "total": 5,
+  "success": 5,
   "failed": 0,
   "assets": [
     {
@@ -30,6 +30,14 @@
       "category": "character",
       "path": "/Users/lemmon-428/Documents/michi/drama-workflow/docs/scripts/script1/assets/characters/gu_changzhou.png",
       "size": "1088x1920",
+      "status": "success"
+    },
+    {
+      "name": "company_lobby",
+      "category": "scene",
+      "path": "docs/scripts/script1/assets/scenes/company_lobby.png",
+      "size": "1536x1024",
+      "prompt": "8K hyper-realistic photography, completely empty modern corporate headquarters lobby, deserted interior with no people, daytime scene, bright natural light flooding through floor-to-ceiling glass curtain walls, double-height atrium with polished marble floors, sleek reception desk with blank unmarked backlit feature wall, bright imposing corporate atmosphere, cinematic wide-angle establishing shot, eye-level composition, photorealistic film still, high detail, realistic materials and textures, empty unoccupied space, no people, no human figures, no silhouettes, no reflections of people, no text, no words, no signage text, no labels, no watermark, no logo",
       "status": "success"
     }
   ]
