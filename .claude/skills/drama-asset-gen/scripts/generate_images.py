@@ -155,6 +155,7 @@ def generate_one(task: dict, output_dir: Path) -> dict:
                 "category": category,
                 "path": str(filepath),
                 "size": size,
+                "prompt": prompt,
                 "status": "success",
             }
         except Exception as e:
@@ -167,6 +168,7 @@ def generate_one(task: dict, output_dir: Path) -> dict:
         "category": category,
         "path": str(filepath),
         "size": size,
+        "prompt": prompt,
         "status": "failed",
         "error": last_error,
     }
@@ -199,12 +201,23 @@ def main():
             print(f"  ✗ Failed: {result.get('error', 'unknown')}")
 
     manifest_path = output_dir / "manifest.json"
+    # 与已有清单按 (category, name) 合并，部分重跑时不丢失其他资产的记录
+    merged = {}
+    if manifest_path.exists():
+        try:
+            for asset in json.loads(manifest_path.read_text()).get("assets", []):
+                merged[(asset.get("category"), asset.get("name"))] = asset
+        except (json.JSONDecodeError, OSError):
+            pass
+    for result in results:
+        merged[(result["category"], result["name"])] = result
+    assets = list(merged.values())
     manifest = {
         "generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "total": total,
-        "success": sum(1 for r in results if r["status"] == "success"),
-        "failed": sum(1 for r in results if r["status"] == "failed"),
-        "assets": results,
+        "total": len(assets),
+        "success": sum(1 for r in assets if r["status"] == "success"),
+        "failed": sum(1 for r in assets if r["status"] == "failed"),
+        "assets": assets,
     }
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2))
     print(f"\nManifest saved to {manifest_path}")

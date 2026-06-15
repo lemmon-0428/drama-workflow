@@ -68,12 +68,10 @@ description: >
 - 提示词末尾必须显式声明 `no text, no words, no labels, no watermark, no logo`
 - 把 Step 3 造型设计表的内容完整翻译进提示词
 
-**场景提示词模板：**
-```
-8K hyper-realistic, [scene type] scene, [time of day lighting], [environment description],
-[atmosphere keywords], [key set pieces], cinematic composition, wide angle,
-photorealistic film still, high detail, no people, no text, no words, no watermark
-```
+**场景提示词** — 必须先读取 `references/scene-prompt-standard.md`，按其中标准生成。核心思路是「场景跟着剧本走」：
+- 16:9 横版（1536x1024），电影感大全景定场镜头，剧本点名的关键陈设必须入镜
+- **默认出空镜（无人、无文字）**：具名角色单独生成、后期合成，场景里画了会冲突且无法复用；AI 生成的招牌文字常是乱码，糊在画面上很廉价。这是默认值，不是铁律
+- **剧本若把"人"或"文字"写成了场所的一部分，就要保留**：熙攘的夜市/座无虚席的旁听席 → 保留虚化的匿名背景群演；霓虹招牌街/便利店货架 → 保留招牌文字。判断"是环境还是角色""是场所灵魂还是杂项"，方法见参考文件，那里也给了人物子句/文字子句两种结尾的模块化公式
 
 **道具提示词模板：**
 ```
