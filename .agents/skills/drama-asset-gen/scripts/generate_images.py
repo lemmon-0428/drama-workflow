@@ -273,7 +273,7 @@ def load_refs(ref_spec, output_dir: Path):
     return refs
 
 
-def run_task(task: dict, output_dir: Path, order: list, episode: str = "") -> dict:
+def run_task(task: dict, output_dir: Path, order: list) -> dict:
     name = task["name"]
     prompt = task["prompt"]
     size = task.get("size", "1024x1024")
@@ -281,23 +281,16 @@ def run_task(task: dict, output_dir: Path, order: list, episode: str = "") -> di
     quality = str(task.get("quality") or DEFAULT_QUALITY).lower()
     ref_spec = task.get("ref") or []
 
-    if category == "shot":
-        # 4b 分镜头站位合成图：落 shots/<集>/<镜号>.png，不进库台账
-        subdir = (output_dir / "shots" / episode) if episode else (output_dir / "shots")
-        subdir.mkdir(parents=True, exist_ok=True)
-        filepath = subdir / f"{name}.png"
-        record = {"name": name, "category": "shot", "episode": episode,
-                  "path": str(filepath.relative_to(output_dir)), "size": size, "prompt": prompt}
-    else:
-        subdir = output_dir / CATEGORY_DIRS.get(category, category)
-        subdir.mkdir(parents=True, exist_ok=True)
-        filepath = subdir / f"{name}.png"
-        record = {"name": name, "category": category, "char_id": task.get("char_id") or name,
-                  "look": task.get("look") or "default", "path": str(filepath.relative_to(output_dir)),
-                  "size": size, "prompt": prompt}
-        for k in PASSTHROUGH:
-            if task.get(k):
-                record[k] = task[k]
+    subdir = output_dir / CATEGORY_DIRS.get(category, category)
+    subdir.mkdir(parents=True, exist_ok=True)
+    filepath = subdir / f"{name}.png"
+    rel_path = str(filepath.relative_to(output_dir))
+
+    record = {"name": name, "category": category, "char_id": task.get("char_id") or name,
+              "look": task.get("look") or "default", "path": rel_path, "size": size, "prompt": prompt}
+    for k in PASSTHROUGH:
+        if task.get(k):
+            record[k] = task[k]
 
     try:
         refs = load_refs(ref_spec, output_dir)
@@ -356,59 +349,51 @@ def main():
 
     results = []
     for i, task in enumerate(tasks, 1):
-        m = "站位合成" if task.get("category") == "shot" else ("编辑" if task.get("ref") else "生成")
+        m = "编辑" if task.get("ref") else "生成"
         print(f"[{i}/{len(tasks)}] {m}: {task['name']} ({task.get('category', '?')})...")
-        r = run_task(task, output_dir, order, args.episode)
+        r = run_task(task, output_dir, order)
         results.append(r)
         if r["status"] == "success":
             print(f"  ✓ [{r['provider']}] {output_dir / r['path']}")
         else:
             print(f"  ✗ 全部渠道失败: {r.get('errors')}")
 
-    # 库资产合并进台账；站位图(category==shot)不进库台账
-    lib_results = [r for r in results if r.get("category") != "shot"]
-    if lib_results:
-        registry_path = output_dir / "asset_registry.json"
-        registry, merged = {}, {}
-        if registry_path.exists():
-            try:
-                registry = json.loads(registry_path.read_text())
-                for a in registry.get("assets", []):
-                    merged[(a.get("category"), a.get("name"))] = a
-            except (json.JSONDecodeError, OSError):
-                registry = {}
+    # 合并进剧集级总台账 asset_registry.json
+    registry_path = output_dir / "asset_registry.json"
+    registry, merged = {}, {}
+    if registry_path.exists():
+        try:
+            registry = json.loads(registry_path.read_text())
+            for a in registry.get("assets", []):
+                merged[(a.get("category"), a.get("name"))] = a
+        except (json.JSONDecodeError, OSError):
+            registry = {}
 
-        for r in lib_results:
-            key = (r["category"], r["name"])
-            existing = merged.get(key, {})
-            first_ep = existing.get("first_episode") or args.episode or None
-            used_by = list(dict.fromkeys((existing.get("used_by") or []) + ([args.episode] if args.episode else [])))
-            asset = {**existing, **r}
-            if first_ep:
-                asset["first_episode"] = first_ep
-            if used_by:
-                asset["used_by"] = used_by
-            merged[key] = asset
+    for r in results:
+        key = (r["category"], r["name"])
+        existing = merged.get(key, {})
+        first_ep = existing.get("first_episode") or args.episode or None
+        used_by = list(dict.fromkeys((existing.get("used_by") or []) + ([args.episode] if args.episode else [])))
+        asset = {**existing, **r}
+        if first_ep:
+            asset["first_episode"] = first_ep
+        if used_by:
+            asset["used_by"] = used_by
+        merged[key] = asset
 
-        assets = list(merged.values())
-        registry.update({
-            "drama": args.drama or registry.get("drama", ""),
-            "style": args.style or registry.get("style", ""),
-            "updated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
-            "total": len(assets),
-            "success": sum(1 for a in assets if a.get("status") == "success"),
-            "failed": sum(1 for a in assets if a.get("status") == "failed"),
-            "assets": assets,
-        })
-        registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n")
-        print(f"\nRegistry updated: {registry_path}")
-
-    shots = [r for r in results if r.get("category") == "shot"]
-    if shots:
-        sok = sum(1 for r in shots if r["status"] == "success")
-        print(f"站位图 {sok}/{len(shots)} 成功 → shots/{args.episode or ''}（不入库台账）")
-
+    assets = list(merged.values())
+    registry.update({
+        "drama": args.drama or registry.get("drama", ""),
+        "style": args.style or registry.get("style", ""),
+        "updated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "total": len(assets),
+        "success": sum(1 for a in assets if a.get("status") == "success"),
+        "failed": sum(1 for a in assets if a.get("status") == "failed"),
+        "assets": assets,
+    })
+    registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n")
     ok = sum(1 for r in results if r["status"] == "success")
+    print(f"\nRegistry updated: {registry_path}")
     print(f"本次 {ok}/{len(results)} 成功" + (f"（集：{args.episode}）" if args.episode else ""))
     if ok < len(results):
         sys.exit(2)
