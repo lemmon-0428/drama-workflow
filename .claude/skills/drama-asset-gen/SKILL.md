@@ -1,164 +1,120 @@
 ---
 name: drama-asset-gen
 description: >
-  从剧本文件（Word/PDF/TXT）中提取人物小传、场景描述、关键道具，先为人物做造型设计（结合剧情设计穿搭），
-  再按影视定妆照标准生成 gpt-image-2 图片提示词，并调用 API 批量生成资产图片。当用户提到"剧本资产生成"、
-  "从剧本生成人物/场景图"、"短剧资产"、"drama asset"、"角色形象图"、"人物定妆照"、"场景概念图"，
-  或者上传了剧本文件并希望生成配套图片素材时，都应触发此 skill。即使用户只说"帮我从这个剧本里出几张图"也应使用。
+  短剧流水线第④步（拆解→设定→分镜头→资产）。读 bible（设计）+ 分镜头（需求/站位），调用多渠道 gpt-image-2
+  生成两类资产：①库资产——人物定妆照 / 场景空镜 / 形象变体，跨集复用、台账追踪；②分镜头站位合成图——把场景板 +
+  相关人物参考图用图生图合成每一镜的站位画面。当用户要"生成人物/场景资产、角色定妆照、场景图、
+  角色变体/换装图、分镜头站位图 / 合成镜头画面 / 出每个镜头的画面"时触发；即使只说"出几张资产图"也用。
+  设计（造型/五官锚/画风）来自 bible，不在本 skill 里重新设计。
 ---
 
-# Drama Asset Generator
+# Drama Asset Generator（资产生成）
 
-从单集剧本文件中提取人物、场景、道具描述，为人物设计贴合剧情的造型，按统一标准生成图片提示词，并调用 gpt-image-2 API 生成资产图片。
+把 `drama-bible` 的设计和 `drama-storyboard` 的镜头需求，渲染成两类图片资产，并跨集统一管理。**设计已在 bible 定好**，本 skill 只负责"按设计出图 + 复用追踪 + 按镜头合成站位"。流水线契约见 `docs/流水线设计.md`。
 
-## 工作流程
+## 输入
+- `docs/scripts/<剧名>/bible/bible.json`——设计源（角色 `identity_anchor`/`outfit_prompt`/looks、场景 looks、全剧 `style`）
+- `docs/scripts/<剧名>/<集>/分镜头.json`——需求源（哪些角色/场景/look 出现、每镜站位）。做库资产可只用 bible；做站位图必须有它
+- `docs/scripts/<剧名>/assets/`——已有库资产 + 台账
 
-### Step 1: 读取剧本文件
-
-剧本文件通常放在 `docs/scripts/<剧名>/` 目录下。生成的资产图片放在同一目录下的 `assets/` 子目录中。
-
-支持三种格式：
-- `.docx` — 使用 python-docx 读取
-- `.pdf` — 使用 PyMuPDF (fitz) 或 Read 工具读取
-- `.txt` — 直接读取
-
-### Step 2: 提取资产描述
-
-从剧本中识别并提取以下三类资产：
-
-**人物（Characters）**
-- 寻找"人物小传"、"人物介绍"、"角色设定"等章节
-- 如果没有明确章节，从对白和叙述中推断主要角色
-- 每个人物提取：姓名、年龄、性别、身份背景、外貌描述、**剧情处境**（如"贫困大学生兼职中"、"职场掌权者"）、性格气质
-- 剧情处境很重要——它决定了 Step 3 造型设计的方向
-
-**场景（Scenes）**
-- 寻找场景描述段落（通常在每场戏的开头，如"内景/外景"、"日/夜"标注后的环境描写）
-- 提取：场景名称、时间（日/夜）、环境描述、氛围关键词、重要陈设
-- 合并相似场景，避免重复生成
-
-**道具（Props）**
-- 识别剧情中反复出现或有特殊意义的物品（信件、武器、首饰、特殊装置等）
-- 只提取对剧情有推动作用的关键道具，忽略日常物品
-- 提取：道具名称、外观描述、材质、时代风格
-
-### Step 3: 人物造型设计
-
-像影视剧服装造型师一样工作。剧本里的人物描述往往只有一句话（如"穿着简单"），直接拿去生图会让 AI 自由发挥，导致风格不统一、不贴合剧情。这一步把模糊的人设翻译成具体的服装单品。
-
-结合**人物小传 + 剧情处境**，为每个人物设计一套完整造型，输出造型设计表：
-
+## 输出
 ```
-角色名｜年龄性别｜身份｜发型发色（女性加妆容）｜身高体态｜
-穿搭（上装/下装/鞋/配饰，具体到款式颜色材质）｜气质关键词
+docs/scripts/<剧名>/assets/
+├── characters/  scenes/  props/        4a 库资产： <id>.png · <id>__<look>.png
+├── shots/<第N集_集名>/<镜号>.png        4b 站位合成图
+├── asset_registry.json                 库资产台账（唯一事实来源）
+└── 角色形象卡.md                        派生人读视图
+docs/scripts/<剧名>/<集>/资产清单.md     本集复用/新增清单（人读）
 ```
+站位图状态回写到 `分镜头.json` 每镜的 `shot_image`，不进库资产台账。
 
-设计原则：
-- 穿搭必须体现人物的身份和经济状况（豪门继承人穿高定西装，贫困学生穿基础款T恤牛仔裤）
-- 穿搭要符合人物在本集剧情中的处境（面试场合、居家、宴会等）
-- 不同人物的造型风格要鲜明区分，一眼能看出角色定位
-- 如果剧情中人物有明显的阶段转变（如穷养太子身份揭穿前后），可为同一人物设计多套造型，分别生成
+## 画风
+从 `bible.json.style` 读，全剧统一套用。`references/character-prompt-standard.md` 以写实为基准；非写实就替换渲染描述词，保留其余硬标准（全身正面/纯白底/均匀柔光/无文字）。
 
-### Step 4: 生成图片提示词
+## 两类资产 + 先后
 
-**人物提示词** — 必须先读取 `references/character-prompt-standard.md`，严格按照定妆照标准生成。核心要求：
-- 9:16 竖版（1088x1920），全身完整入镜，站立正面朝镜头
-- 纯白无缝背景、均匀柔光
-- 8K 超写实真人质感（不是概念设定图——概念图风格容易在画面里生成文字标注）
-- 提示词末尾必须显式声明 `no text, no words, no labels, no watermark, no logo`
-- 把 Step 3 造型设计表的内容完整翻译进提示词
+**4a 库资产**是"一致性锚点"（人物定妆照、场景空镜、形象变体），跨集复用；**4b 站位图**是每镜的合成画面，**用 4a 的图当参考**。所以 **4a 必须先于 4b**。
 
-**场景提示词** — 必须先读取 `references/scene-prompt-standard.md`，按其中标准生成。核心思路是「场景跟着剧本走」：
-- 16:9 横版（1536x1024），电影感大全景定场镜头，剧本点名的关键陈设必须入镜
-- **默认出空镜（无人、无文字）**：具名角色单独生成、后期合成，场景里画了会冲突且无法复用；AI 生成的招牌文字常是乱码，糊在画面上很廉价。这是默认值，不是铁律
-- **剧本若把"人"或"文字"写成了场所的一部分，就要保留**：熙攘的夜市/座无虚席的旁听席 → 保留虚化的匿名背景群演；霓虹招牌街/便利店货架 → 保留招牌文字。判断"是环境还是角色""是场所灵魂还是杂项"，方法见参考文件，那里也给了人物子句/文字子句两种结尾的模块化公式
+## 三种模式（库资产，默认 B）
 
-**道具提示词模板：**
-```
-8K hyper-realistic, [prop name], [material and texture], [era/style], [specific details],
-centered composition, clean background, product photography style, soft studio lighting,
-high detail, no text, no words, no watermark
-```
+| 触发 | 模式 | 做什么 |
+|------|------|--------|
+| 默认（"给第N集出资产"） | **B 增量** | 只补本集分镜头用到、但库里还没有的资产 |
+| "只盘点/规划全剧资产" | **只读规划** | 出/更新 `资产规划表.md`，不生成 |
+| "把整部剧资产都生成" | **A 全量** | 规划 → 展示待生成数量 → 确认后批量（base 先行→锁脸→变体） |
 
-提示词要点：
-- 始终使用英文，即使剧本是中文
-- 人物种族外貌与剧本设定一致（中文剧本默认中国人外貌）
-- 所有类型的提示词都必须以 no text/no watermark 约束结尾——资产图是给后续制作流程用的，画面里出现文字就废了
+A 即使被显式要求也先出清单+数量、确认再开批。
 
-### Step 5: 确认资产清单
+## 工作流程 4a：库资产
 
-在生成图片之前，向用户展示完整的资产清单（人物部分附造型设计表）：
+1. **加载**：`bible.json`（设计）+ `assets/asset_registry.json`（已有）。
+2. **算需求**：从本集 `分镜头.json` 收集出现的 `(角色id, look)` 和 `(场景id, look)`（A 模式则取全剧）。
+3. **去重分类**：每个 (id, look) 比对台账 → 复用 / 新增base / 新增变体。只有新增/变体要出图。
+4. **组提示词**：
+   - 人物：读 `references/character-prompt-standard.md`。提示词 = bible 的 `identity_anchor`（**逐字复用锁脸**）+ 该 look 的 `outfit_prompt` + 定妆硬标准（9:16 1088x1920、全身正面、纯白底、no text…）。
+   - 场景：读 `references/scene-prompt-standard.md`（16:9 1920x1088、默认空镜、剧本写了人/文字才保留）。
+   - 变体：走**编辑模式**，`ref` 传 parent look 的图，图生图锁一致性。
+5. **确认**：展示本集清单（复用 vs 新增，变体注明 parent+原因），写 `<集>/资产清单.md`；用户已明确要生成就直接继续。
+6. **base 先行 → 锁脸检查点 → 再出变体**：先生成新 base，给用户确认五官 OK，再出依赖它的变体。
+7. 调脚本（见下），更新台账，重生成 `角色形象卡.md`。
 
-```
-📋 资产清单：
+## 工作流程 4b：分镜头站位合成
 
-👤 人物（X个）
-  1. 角色名 — 造型设计摘要 — 尺寸
-  2. ...
+前提：本集库资产已齐（4a 完成）。对 `分镜头.json` 里每个（或用户指定的）镜头：
 
-🏞 场景（X个）
-  1. 场景名 — 简要描述 — 尺寸
+1. **取参考图**：`scene.id+look` 的场景板 + 每个 `characters[].id+look` 的人物图（都从 `assets/` 取路径）。
+2. **写合成提示词**：用该镜的 `画面 + 景别 + 机位 + 镜头运动 + 每个角色的站位/动作` 组织一句"把这些人物按此站位放进这个场景、此景别构图"的指令（英文），末尾 no text/no watermark。
+3. **调脚本编辑模式**：`ref` = [场景板, 人物A, 人物B…]（packy/moyu 的 edits 最多 16 张参考图），输出到 `assets/shots/<集>/<镜号>.png`。
+4. **回写** `分镜头.json` 该镜 `shot_image` = 路径 + 成功状态。
 
-🔧 道具（X个）
-  1. 道具名 — 简要描述 — 尺寸
+站位图默认 16:9 `1920x1088`（成片画幅）。
 
-共计 N 张图片待生成。确认开始生成？
-```
+## 脚本用法（多渠道 + 生成/编辑）
 
-等待用户确认后再继续。用户可以在此步骤中删除不需要的项、修改造型设计、或调整尺寸。如果用户在对话中已经明确要求直接生成，则展示清单后直接继续，不再额外询问。
+`scripts/generate_images.py` 串行逐张，渠道失败自动回退：默认 `micu → packy → moyu`（`IMAGE2_PROVIDER_ORDER` 可覆盖）。环境变量放 ~/.zshrc，**不进仓库**：`IMAGE2_API_KEY/BASE_URL`、`PACKY_API_KEY/BASE_URL`、`MOYU_API_KEY/BASE_URL`。
 
-### Step 6: 调用 API 生成图片
-
-使用 `scripts/generate_images.py` 脚本调用 gpt-image-2 API 生成图片。
-
-运行前确保环境变量已配置：
-- `IMAGE2_API_KEY` — API 密钥（必需）
-- `IMAGE2_BASE_URL` — API 地址（可选，默认 `https://www.micuapi.ai`）
-
-执行命令：
 ```bash
 python .claude/skills/drama-asset-gen/scripts/generate_images.py \
-  --tasks '<tasks_json>' \
-  --output-dir 'docs/scripts/<剧名>/assets'
+  --tasks '<tasks_json>' --output-dir 'docs/scripts/<剧名>/assets' \
+  --episode '<集目录名>' --drama '<剧名>' --style '<画风>'
 ```
 
-其中 `tasks_json` 是一个 JSON 数组，每个元素：
+task 字段（`ref` 给了就走编辑/图生图；4a 变体和 4b 站位图都用它）：
 ```json
-{
-  "name": "asset_filename",
-  "prompt": "the english prompt",
-  "size": "1088x1920",
-  "category": "character|scene|prop"
-}
+{ "name": "navigator_k__chest_reveal", "category": "character", "size": "1088x1920",
+  "prompt": "<identity_anchor 逐字 + 变化造型 + 硬标准>",
+  "char_id": "navigator_k", "look": "chest_reveal", "parent": "default",
+  "identity_anchor": "<五官锚>", "display_name": "领航员K", "design": "<摘要>",
+  "quality": "medium", "ref": ["characters/navigator_k.png"] }
 ```
+站位图 task：`category` 设为 `"shot"`、`name` 用镜号、`size` 默认 `1920x1088`、`ref` 传 `[场景板, 人物A, 人物B…]`，运行时配合 `--episode <集目录名>`。脚本会把它落到 `shots/<集>/<镜号>.png` 且**不写入库台账**（台账只记库资产）。出图后由本 skill 把路径回写到 `分镜头.json` 对应镜的 `shot_image`。示例：
+```json
+{ "name": "2-001", "category": "shot", "size": "1920x1088",
+  "prompt": "Compose a film still: place the navigator on the right seated on the high platform and the old man entering from the left, medium-wide eye-level shot inside this hall…, no text, no watermark",
+  "ref": ["scenes/noah_ark_interior_hall.png", "characters/navigator_k.png", "characters/old_man.png"] }
+```
+packy/moyu 按 gpt-image-2 约束校验尺寸（≤3840px、16倍数、≤3:1、像素65万~829万）。
 
-脚本会：
-1. 在输出目录下创建 `characters/`、`scenes/`、`props/` 子目录
-2. 逐个调用 API 生成图片
-3. 将图片保存为 PNG 文件
-4. 输出生成结果的 JSON 摘要并写入 `manifest.json`
+脚本合并更新 `asset_registry.json`（记 `provider`/`mode`/`first_episode`/追加 `used_by`，保留手工字段）。
 
-### Step 7: 输出结果
+## 台账与人读视图
+- `asset_registry.json`：库资产唯一事实来源（扁平 looks 模型：`name/category/char_id/look/parent/identity_anchor/display_name/path/size/provider/mode/status/first_episode/used_by/prompt`）。
+- `角色形象卡.md`：从台账派生（每角色：五官锚 + 各 look + 图路径 + 用在哪几集）。
+- `<集>/资产清单.md`：本集复用 + 新增。
 
-生成完成后，向用户报告：
-- 成功生成了多少张图片，保存路径
-- 如果有失败的，列出失败原因（脚本会自动重试一次；网络瞬断类失败可单独重跑失败项）
-- `manifest.json` 记录所有资产的元数据（名称、提示词、路径、尺寸）
+## 尺寸
+| 类型 | 默认 | 说明 |
+|------|------|------|
+| 人物库资产 | 1088x1920 (9:16, ≈1080p) | 竖版全身定妆照 |
+| 场景库资产 | 1920x1088 (16:9, ≈1080p) | 横版空镜 |
+| 站位合成图 | 1920x1088 (16:9) | 成片画幅 |
+| 道具 | 1024x1024 | 正方形 |
 
-## 尺寸参考
+三渠道均支持上述尺寸（packy/moyu 满足约束即可，micu 走固定枚举）。
 
-| 资产类型 | 默认尺寸 | 说明 |
-|---------|---------|------|
-| 人物 | 1088x1920 (9:16) | 竖版全身定妆照 |
-| 场景 | 1536x1024 (约16:9) | 横版场景图 |
-| 道具 | 1024x1024 (1:1) | 正方形道具展示 |
-
-用户可在提示词或确认步骤中指定其他尺寸。支持的尺寸：
-`1024x1024`, `1280x720`, `720x1280`, `1024x1536`, `1536x1024`, `1920x1088`, `1088x1920`, `2048x2048`
-
-## 注意事项
-
-- 如果剧本内容较长，优先处理有明确描述的角色和场景
-- 提示词中避免出现真实人名或明星名字
-- 所有图片文件名使用英文小写+下划线命名，如 `li_ming_portrait.png`
-- 同一人物多套造型时，文件名加阶段后缀，如 `luo_ye_student.png`、`luo_ye_heir.png`
+## 质量自检
+- 库资产：本集分镜头用到的 (id,look) 都已"复用或新增"，没有遗漏；变体五官锚逐字复用 + 用 parent 图做 ref。
+- 站位图：每个处理的镜头有 `shots/<集>/<镜号>.png`，`分镜头.json` 的 `shot_image` 已回写。
+- 4a 先于 4b；图都目检过（全身/纯白底/无文字；空镜该空；站位图人物站位与分镜头一致）。
+- 台账、形象卡、资产清单已更新。
+- 报告：本集 新增/复用/变体/站位图 数量、失败项、路径。
