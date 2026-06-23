@@ -1,0 +1,259 @@
+{
+  "drama": "睡错对象：他竟是男友的爹",
+  "episode": "第1集_第1",
+  "_note": "每段 ref_set 有序=送SD2的reference_image顺序，@[board:] 永远第1。色卡按夜/清晨复用；场景仅在环境/门口关系是主体时锚定。",
+  "assets": {
+    "@[board:ep1_1A]": "第1集_第1/分段/scenes/SEG-1A_草图板_红色仪式被打断.png",
+    "@[board:ep1_1B]": "第1集_第1/分段/scenes/SEG-1B_草图板_空置等待与睡去.png",
+    "@[board:ep1_1C]": "第1集_第1/分段/scenes/SEG-1C_草图板_伊森入场.png",
+    "@[board:ep1_1D]": "第1集_第1/分段/scenes/SEG-1D_草图板_壁炉黑场.png",
+    "@[board:ep1_1E]": "第1集_第1/分段/scenes/SEG-1E_草图板_清晨身份证物.png",
+    "@[board:ep1_1F]": "第1集_第1/分段/scenes/SEG-1F_草图板_门口撞破.png",
+    "@[palette:ep1_ville_night_noir]": "第1集_第1/分段/scenes/色卡_ep1_ville_night_noir.png",
+    "@[palette:ep1_ville_morning_cold]": "第1集_第1/分段/scenes/色卡_ep1_ville_morning_cold.png",
+    "@[staging:ep1_1F]": "第1集_第1/分段/scenes/staging_SEG-1F_门口撞破.png",
+    "@[char:oliver|look:default]": "assets/characters/oliver.png",
+    "@[char:jasper|look:default]": "assets/characters/jasper.png",
+    "@[char:ethan|look:default]": "assets/characters/ethan.png",
+    "@[prop:red_restraint_set]": "assets/props/red_restraint_set.png",
+    "@[prop:father_son_photo_frame]": "assets/props/father_son_photo_frame.png",
+    "@[prop:phone_damon_call]": "assets/props/phone_damon_call.png",
+    "@[scene:ville_penthouse_living_room|look:night_dim]": "assets/scenes/ville_penthouse_living_room__night_dim.png",
+    "@[scene:ville_penthouse_living_room|look:morning_cold]": "assets/scenes/ville_penthouse_living_room__morning_cold.png",
+    "@[scene:jasper_bedroom_doorway|look:morning_reveal]": "assets/scenes/jasper_bedroom_doorway__morning_reveal.png"
+  },
+  "segments": [
+    {
+      "seg": "SEG-1A",
+      "title": "红色仪式被打断",
+      "scene": "The Ville 顶层公寓客厅·夜",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "prose_ref": "分段/段提示词.md#SEG-1A",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_1A]",
+          "role": "storyboard",
+          "why": "构图/机位/硬切/运镜主引导"
+        },
+        {
+          "token": "@[palette:ep1_ville_night_noir]",
+          "role": "palette",
+          "why": "夜戏黑金红配色"
+        },
+        {
+          "token": "@[char:oliver|look:default]",
+          "role": "character",
+          "why": "奥利弗露脸/半身状态"
+        },
+        {
+          "token": "@[char:jasper|look:default]",
+          "role": "character",
+          "why": "贾斯帕露脸/西装状态"
+        },
+        {
+          "token": "@[prop:red_restraint_set]",
+          "role": "prop",
+          "why": "红色道具组"
+        },
+        {
+          "token": "@[prop:phone_damon_call]",
+          "role": "prop",
+          "why": "Damon 来电手机"
+        },
+        {
+          "token": "@[scene:ville_penthouse_living_room|look:night_dim]",
+          "role": "scene",
+          "why": "本段需要建立夜晚客厅空间"
+        }
+      ],
+      "戏剧属性": "重点",
+      "提示词档位": "满配"
+    },
+    {
+      "seg": "SEG-1B",
+      "title": "空置等待与睡去",
+      "scene": "The Ville 顶层公寓客厅·夜",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "prose_ref": "分段/段提示词.md#SEG-1B",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_1B]",
+          "role": "storyboard",
+          "why": "构图/等待节奏/时间跳切主引导"
+        },
+        {
+          "token": "@[palette:ep1_ville_night_noir]",
+          "role": "palette",
+          "why": "夜戏黑金红配色"
+        },
+        {
+          "token": "@[char:oliver|look:default]",
+          "role": "character",
+          "why": "奥利弗等待/睡去状态"
+        },
+        {
+          "token": "@[prop:red_restraint_set]",
+          "role": "prop",
+          "why": "红色道具状态"
+        }
+      ],
+      "戏剧属性": "常规",
+      "提示词档位": "满配"
+    },
+    {
+      "seg": "SEG-1C",
+      "title": "伊森入场：送上门的礼物",
+      "scene": "The Ville 顶层公寓客厅·夜",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "prose_ref": "分段/段提示词.md#SEG-1C",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_1C]",
+          "role": "storyboard",
+          "why": "构图/伊森入场/椅子到沙发调度主引导"
+        },
+        {
+          "token": "@[palette:ep1_ville_night_noir]",
+          "role": "palette",
+          "why": "夜戏黑金红配色"
+        },
+        {
+          "token": "@[char:oliver|look:default]",
+          "role": "character",
+          "why": "奥利弗惊醒/反应"
+        },
+        {
+          "token": "@[char:ethan|look:default]",
+          "role": "character",
+          "why": "伊森入场/成熟父辈形象"
+        },
+        {
+          "token": "@[prop:red_restraint_set]",
+          "role": "prop",
+          "why": "红色道具组"
+        }
+      ],
+      "戏剧属性": "重点",
+      "提示词档位": "满配"
+    },
+    {
+      "seg": "SEG-1D",
+      "title": "壁炉黑场：失控的省略",
+      "scene": "The Ville 顶层公寓客厅·夜",
+      "duration_s": 10,
+      "ratio": "16:9",
+      "prose_ref": "分段/段提示词.md#SEG-1D",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_1D]",
+          "role": "storyboard",
+          "why": "构图/道具省略/壁炉黑场主引导"
+        },
+        {
+          "token": "@[palette:ep1_ville_night_noir]",
+          "role": "palette",
+          "why": "夜戏黑金红配色"
+        },
+        {
+          "token": "@[prop:red_restraint_set]",
+          "role": "prop",
+          "why": "红色道具作为省略符号"
+        }
+      ],
+      "戏剧属性": "过场",
+      "提示词档位": "满配"
+    },
+    {
+      "seg": "SEG-1E",
+      "title": "清晨身份证物",
+      "scene": "The Ville 顶层公寓客厅·清晨",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "prose_ref": "分段/段提示词.md#SEG-1E",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_1E]",
+          "role": "storyboard",
+          "why": "构图/清晨醒来/相框拉焦主引导"
+        },
+        {
+          "token": "@[palette:ep1_ville_morning_cold]",
+          "role": "palette",
+          "why": "清晨冷白揭示配色"
+        },
+        {
+          "token": "@[char:oliver|look:default]",
+          "role": "character",
+          "why": "奥利弗清晨反应"
+        },
+        {
+          "token": "@[char:ethan|look:default]",
+          "role": "character",
+          "why": "伊森清晨身份揭示"
+        },
+        {
+          "token": "@[prop:father_son_photo_frame]",
+          "role": "prop",
+          "why": "父子关系线索"
+        },
+        {
+          "token": "@[prop:red_restraint_set]",
+          "role": "prop",
+          "why": "后果证物"
+        },
+        {
+          "token": "@[scene:ville_penthouse_living_room|look:morning_cold]",
+          "role": "scene",
+          "why": "本段清晨客厅和窗台相框是主体空间"
+        }
+      ],
+      "戏剧属性": "重点",
+      "提示词档位": "满配"
+    },
+    {
+      "seg": "SEG-1F",
+      "title": "门口撞破",
+      "scene": "贾斯帕卧室门口·清晨撞破",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "prose_ref": "分段/段提示词.md#SEG-1F",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_1F]",
+          "role": "storyboard",
+          "why": "构图/门口三人调度/硬切主引导"
+        },
+        {
+          "token": "@[palette:ep1_ville_morning_cold]",
+          "role": "palette",
+          "why": "清晨冷白撞破配色"
+        },
+        {
+          "token": "@[char:oliver|look:default]",
+          "role": "character",
+          "why": "奥利弗逃离状态"
+        },
+        {
+          "token": "@[char:ethan|look:default]",
+          "role": "character",
+          "why": "伊森跟随/震惊反应"
+        },
+        {
+          "token": "@[char:jasper|look:default]",
+          "role": "character",
+          "why": "贾斯帕推门撞破"
+        },
+        {
+          "token": "@[scene:jasper_bedroom_doorway|look:morning_reveal]",
+          "role": "scene",
+          "why": "门口空间/框中框揭示是主体"
+        }
+      ],
+      "戏剧属性": "重点",
+      "提示词档位": "满配"
+    }
+  ]
+}

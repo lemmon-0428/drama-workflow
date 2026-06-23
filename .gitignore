@@ -1,3 +1,9 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# API keys (drama-asset-gen)
+_secrets.py
+
+# Generated API submission logs may include signed URLs / credentials
+提交记录.json

@@ -1,0 +1,179 @@
+{
+  "drama": "巴别塔",
+  "style": "8K 超写实真人电影感（AI真人科幻 / Dune·Interstellar）",
+  "updated_at": "2026-06-20 21:08:18",
+  "total": 9,
+  "success": 9,
+  "failed": 0,
+  "assets": [
+    {
+      "name": "navigator_k",
+      "category": "character",
+      "char_id": "navigator_k",
+      "look": "default",
+      "path": "characters/navigator_k.png",
+      "size": "945x1665",
+      "prompt": "8K hyper-realistic photography, full-body standing portrait, 40-year-old East Asian man, weathered stoic face, deep-set tired eyes like an extinguished volcano, sharp cheekbones and a hard jawline, short cropped black hair flecked with grey, faint stubble, tall lean upright build, wearing a dark charcoal layered long coat-robe over a high-collar technical tunic shirt, worn leather utility harness and belt, dark trousers tucked into heavy battered boots, ash-and-earth muted dusty palette, Dune-like wasteland navigator uniform, weathered stoic wasteland-navigator aura, standing straight facing camera, complete full body in frame head to toe, standard body proportions, pure white seamless studio background, even soft diffused studio lighting, no harsh shadows, realistic skin hair and fabric texture, cinematic film quality, Dune and Interstellar photoreal sci-fi tone, no text, no words, no labels, no watermark, no logo",
+      "identity_anchor": "40-year-old East Asian man, weathered stoic face, deep-set tired eyes like an extinguished volcano, sharp cheekbones and a hard jawline, short cropped black hair flecked with grey, faint stubble, tall lean upright build",
+      "display_name": "领航员K",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "first_episode": "第1集_开篇",
+      "used_by": [
+        "第1集_开篇",
+        "第2集_乘客"
+      ],
+      "size_requested": "1088x1920"
+    },
+    {
+      "name": "monk_robot",
+      "category": "character",
+      "char_id": "monk_robot",
+      "look": "default",
+      "path": "characters/monk_robot.png",
+      "size": "1088x1920",
+      "prompt": "8K hyper-realistic photography, full figure of a seated meditating humanoid robot monk in lotus cross-legged posture, body of patchwork copper and weathered rust-streaked iron plates with exposed precision gears at the joints, smooth featureless metal faceplate with two hollow dark eye-sockets, no human skin, draped in a flowing red Buddhist monk kasaya robe over the metal body, serene still meditation pose, complete figure centered in frame, pure white seamless studio background, even soft diffused studio lighting, no harsh shadows, realistic metal and fabric texture, cinematic film quality, Dune and Interstellar photoreal sci-fi tone, no text, no words, no labels, no watermark, no logo",
+      "identity_anchor": "seated meditating humanoid robot monk, patchwork copper and weathered iron plates with exposed gears, smooth featureless faceplate with two hollow dark eye-sockets",
+      "display_name": "机器僧",
+      "status": "success",
+      "mode": "generate",
+      "provider": "packy",
+      "first_episode": "第1集_开篇",
+      "used_by": [
+        "第1集_开篇",
+        "第2集_乘客"
+      ]
+    },
+    {
+      "name": "wasteland_exterior",
+      "category": "scene",
+      "char_id": "wasteland_exterior",
+      "look": "dusk",
+      "path": "scenes/wasteland_exterior.png",
+      "size": "1536x1024",
+      "prompt": "8K hyper-realistic photography, exterior post-apocalyptic Earth wasteland at dusk, dusk scene with warm-cold backlit light, atmospheric dust haze and long shadows, endless desert of sand dunes, ruined mud statues and crumbling walls of dead human civilization, smoke trailing to the horizon, a colossal carved giant human-face mountain rising from the sand as a monument, Dune-like wasteland, desolate epic end-times atmosphere, cinematic wide-angle establishing shot, eye-level composition, photorealistic film still, high detail, realistic materials and textures, empty unoccupied space, no people, no human figures, no text, no signage text, no watermark, no logo",
+      "display_name": "废土黄昏外景",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "first_episode": "第1集_开篇",
+      "used_by": [
+        "第1集_开篇"
+      ],
+      "size_requested": "1920x1088"
+    },
+    {
+      "name": "noah_ark_hall",
+      "category": "scene",
+      "char_id": "noah_ark_hall",
+      "look": "dim",
+      "path": "scenes/noah_ark_hall.png",
+      "size": "1666x944",
+      "prompt": "8K hyper-realistic photography, vast empty interior main hall of a Noah Ark spaceship, dim moody desolate scene, cool light pouring in from a huge floor-to-ceiling viewport onto the dead silent Earth outside as the only light source, near-future sci-fi architecture plus Eastern Zen minimalism, a raised elevated platform for a high seat, passenger cabins around, an instrument dashboard, cold oppressive enclosed atmosphere, cinematic wide-angle establishing shot, eye-level composition, photorealistic film still, high detail, realistic materials and textures, empty unoccupied space, no people, no human figures, no text, no signage text, no watermark, no logo",
+      "display_name": "诺亚方舟内部大厅",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "first_episode": "第1集_开篇",
+      "used_by": [
+        "第1集_开篇",
+        "第2集_乘客"
+      ],
+      "size_requested": "1920x1088"
+    },
+    {
+      "name": "noah_ark",
+      "category": "prop",
+      "char_id": "noah_ark",
+      "look": "default",
+      "path": "props/noah_ark.png",
+      "size": "1254x1254",
+      "prompt": "8K hyper-realistic photography, a Noah Ark spaceship vehicle, spaceship-like near-future sci-fi metal hull with rugged wasteland industrial design lines, weathered scratched metal, Dune-like wasteland ark vehicle, isolated centered on pure white background, full vehicle in frame, photorealistic film still, realistic metal texture, cinematic film quality, no text, no words, no labels, no watermark, no logo",
+      "display_name": "诺亚方舟",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "first_episode": "第1集_开篇",
+      "used_by": [
+        "第1集_开篇"
+      ],
+      "size_requested": "1024x1024"
+    },
+    {
+      "name": "old_man",
+      "category": "character",
+      "char_id": "old_man",
+      "look": "default",
+      "path": "characters/old_man.png",
+      "size": "945x1665",
+      "prompt": "8K hyper-realistic photography, full-body standing portrait, a gaunt elderly East Asian man in his 70s, deeply wrinkled sunken face, sparse wispy white hair and an unkempt thin white beard, rheumy bright fervent eyes, frail bony build, wearing a layered ragged wasteland robe of grey-yellow weathered linen, frayed and patched in many places, a loose rope belt, exposed bony wrists, the humble shabby look of an end-times wandering preacher, standing straight facing camera, complete full body in frame head to toe, standard body proportions, pure white seamless studio background, even soft diffused studio lighting, no harsh shadows, realistic skin hair and fabric texture, cinematic film quality, Dune and Interstellar photoreal sci-fi tone, no text, no words, no labels, no watermark, no logo",
+      "identity_anchor": "a gaunt elderly East Asian man in his 70s, deeply wrinkled sunken face, sparse wispy white hair and an unkempt thin white beard, rheumy bright fervent eyes, frail bony build",
+      "display_name": "老人",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "first_episode": "第2集_乘客",
+      "used_by": [
+        "第2集_乘客"
+      ],
+      "size_requested": "1088x1920"
+    },
+    {
+      "name": "woman",
+      "category": "character",
+      "char_id": "woman",
+      "look": "default",
+      "path": "characters/woman.png",
+      "size": "945x1665",
+      "prompt": "8K hyper-realistic photography, full-body standing portrait, a haggard woman in her early 30s, gaunt pale face with sharp features and high cheekbones, large frightened dark eyes, smudged worn makeup, long dark hair pulled back loosely, slender thin frame, wearing a fitted worn faded dark knit top under a ragged long coat or cloak, dark trousers and scuffed ankle boots, grimy muted palette with faint traces of trying to stay presentable, standing straight facing camera, complete full body in frame head to toe, standard body proportions, pure white seamless studio background, even soft diffused studio lighting, no harsh shadows, realistic skin hair and fabric texture, cinematic film quality, Dune and Interstellar photoreal sci-fi tone, no text, no words, no labels, no watermark, no logo",
+      "identity_anchor": "a haggard woman in her early 30s, gaunt pale face with sharp features and high cheekbones, large frightened dark eyes, smudged worn makeup, long dark hair pulled back loosely, slender thin frame",
+      "display_name": "女人",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "first_episode": "第2集_乘客",
+      "used_by": [
+        "第2集_乘客"
+      ],
+      "size_requested": "1088x1920"
+    },
+    {
+      "name": "burly_man",
+      "category": "character",
+      "char_id": "burly_man",
+      "look": "default",
+      "path": "characters/burly_man.png",
+      "size": "944x1665",
+      "prompt": "8K hyper-realistic photography, full-body standing portrait, a burly man in his late 30s, broad heavy-set face with a strong square jaw, thick dark stubble, deep-set angry brows, close-cropped dark hair, muscular thick neck and powerful build, wearing a heavy worn dark workwear jacket over a dirty tank top exposing thick muscular arms, sturdy work trousers and heavy boots, a leather belt, oily rugged aggressive look, standing straight facing camera, complete full body in frame head to toe, standard body proportions, pure white seamless studio background, even soft diffused studio lighting, no harsh shadows, realistic skin hair and fabric texture, cinematic film quality, Dune and Interstellar photoreal sci-fi tone, no text, no words, no labels, no watermark, no logo",
+      "identity_anchor": "a burly man in his late 30s, broad heavy-set face with a strong square jaw, thick dark stubble, deep-set angry brows, close-cropped dark hair, muscular thick neck and powerful build",
+      "display_name": "男人",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "first_episode": "第2集_乘客",
+      "used_by": [
+        "第2集_乘客"
+      ],
+      "size_requested": "1088x1920"
+    },
+    {
+      "name": "dashboard_redlight",
+      "category": "prop",
+      "char_id": "dashboard_redlight",
+      "look": "default",
+      "path": "props/dashboard_redlight.png",
+      "size": "1254x1254",
+      "prompt": "8K hyper-realistic photography, a flashing red fuel-warning indicator lamp on a near-future sci-fi control console panel, glowing urgent blinking warning red light, weathered metal dashboard surface with the single red alert lamp lit, Dune-like wasteland industrial control panel, isolated centered on pure white background, photorealistic film still, realistic metal and glass texture, cinematic film quality, no text, no words, no labels, no watermark, no logo",
+      "display_name": "仪表盘红灯",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "first_episode": "第2集_乘客",
+      "used_by": [
+        "第2集_乘客"
+      ],
+      "size_requested": "1024x1024"
+    }
+  ]
+}

@@ -1,111 +1,104 @@
-# 统一资产 Schema（drama-bible / drama-asset-gen / drama-shot-prompt 的共同契约）
+# 统一资产 Schema（drama-bible / drama-asset-gen / drama-segment / drama-sd2-request 的共同契约）
 
-> 全流程**所有视觉资产**(人物/场景/道具/色卡/空间站位)用**同一套** `assets[]` 结构登记。
-> ② 写"意图层"、⑤ 写"实现层"、④ 按 `ref_token` 引用。这份是唯一事实来源,改格式先改这里。
+> 全流程**所有视觉资产**（人物多面板参考表 / 场景 / 道具 / 色卡 / 草图分镜板）用 `ref_token` 串联。
+> ② 写 bible 规划层（含人物富 `sheet_spec` + `factions[]`）、③ 出库资产、④ 产色卡/草图板两类新资产并写锚定绑定、⑤ 按绑定拼请求。
+> 这份是唯一事实来源，改格式先改这里。
 
-## 0. 两层 + 两级（核心约定）
+## 0. 两层（核心约定）
+- **规划层 `bible.json`（②写）**：每个 character/scene/prop 的设计意图（`intent`）+ `status:"planned"`。bible **恒为规划态**，资产出图这一事实只记 registry，不写回 bible（新资产补登除外）。
+- **已生成层 `asset_registry.json`（③④写）**：真图生成日志（path/size/provider/prompt/used_by）。`ref_token` 连接两层。
+- **色卡 / 草图板**是 ④ 逐段生成物 → 只进 registry + 绑定，**不进 bible**。
 
-- **两层**(同一条资产的两段生命周期)：
-  - `intent`（②前置写）：设计计划——叫什么、锁脸文字、look 计划、style。生成**之前**就有。
-  - `realized`（⑤生成时回写）：真资产——path、提取的锁定特征/调色板、怎么来的。生成**之后**才有。
-  - **冲突以 `realized` 为准**：真图一旦生成，覆盖 `intent` 的预设（吸收"通读全剧的预测 ≠ 实际需要"的漂移）。
-- **两级**(同一套 item schema，存两个地方)：
-  - **全局** `bible/bible.json` → **去重 SoT**：每个 distinct 资产**只此一条**。新生成的必录；复用的**不新增条目**，只在该条目的 `used_by[]` 追加一次使用。
-  - **每集** `<集>/资产清单.json` → **本集清单**：本集用到的**所有**资产（复用 + 新生）各列一条精简引用，让该集对 ⑥SD2 自包含。
+## 1. ref_token 类型（贯穿全流程）
+| 类型 | ref_token | 指向 | 谁产 | 资产层 |
+|---|---|---|---|---|
+| 人物 | `@[char:<id>\|look:<look>]` | 多面板角色参考表（4格：正脸/侧脸/无脸全身/背面，9:16） | ②规划→③出图 | assets/characters/ |
+| 场景 | `@[scene:<id>\|look:<look>]` | 场景板（16:9） | ②规划→③出图 | assets/scenes/ |
+| 道具 | `@[prop:<id>]` | 道具图（1:1；HUD等可特殊） | ②规划→③出图 | assets/props/ |
+| **色卡** | `@[palette:<id>]` | 13色HEX色卡（按场景/段复用，16:9） | ④产 | <集>/分段/scenes/ |
+| **草图板** | `@[board:<seg_id>]` | 手绘草图分镜板（每段一张，白纸，16:9） | ④产 | <集>/分段/scenes/ |
 
-## 1. 资产 item schema（全局 bible.json 的 `assets[]` 每条）
+- **id**：英文小写下划线，全剧稳定。`look`：造型/状态/打光变体短标签。段 id：`ep<N>_<段序>`（如 `ep1_1A`）。
+- **文件名**：base=`<id>.png`、变体=`<id>__<look>.png`；色卡 `色卡_<场景>.png`、草图板 `<段>_草图板.png`。
 
-**全局 `bible.json` 顶层** = `{ drama, style, style_lock, logline, episodes[], assets[] }`——前 5 个是 drama meta（`style_lock` 是 ④ 原样照用的全剧渲染常量）；`assets[]` 是下面的资产条目数组。叙事（bio / 弧光 / 世界观）不在这里，在人读 `.md`。
+## 2. bible.json 顶层
+`{ drama, style, style_lock, logline, episodes[], factions[], assets[] }`
+- `style_lock`：④ 段 prose 原样照用的全剧渲染常量（写实剧含反塑料感锚）。
+- **`factions[]`（新）**：同阵营/同处境组的差异化表，供 ③ 同阵营新角色走编辑模式时个体可区分：
+```json
+{ "id":"su_family", "display_name":"苏家", "aesthetic_family":"当代中国贫困乡村·写实",
+  "members":["su_xiaoqi","su_father","su_mother"],
+  "differentiators": { "gender":"小七=女 / 父=男 / 母=女", "age":"小七=17 / 父=约48 / 母=约45",
+    "physique":"小七=瘦小 / 父=精瘦佝偻跛 / 母=壮实", "hair_beard":"…", "costume":"…",
+    "signature_gear":"小七=黑框眼镜+泥小白鞋 / 父=扁担竹篓 / 母=围裙抹布", "weapons":"none(生活剧)",
+    "trophies":"none", "aura":"…" } }
+```
+无明显阵营的剧 `factions:[]`。
 
-每条 `assets[]`：
-
+## 3. character 资产 item（assets[] 每条，人物）
 ```json
 {
-  "asset_id": "char.navigator_k.default",        // 全局唯一键（命名见 §3）
-  "category": "character",                        // character|scene|prop|color_card|blocking
-  "kind": "human",                                // 仅 character：human|creature|mechanical（可省）
-  "id": "navigator_k",                            // 实体稳定键（character/scene/prop 有；色卡/站位用 scope）
-  "display_name": "领航员K",
-  "look": "default",                              // 变体（character/scene 有；prop 可省）
-  "ref_token": "@[char:navigator_k|look:default]",// ④ 提示词里引用它的槽位（命名见 §3）
-  "status": "generated",                          // planned（②意图）| generated（⑤已出图）
-
-  "intent": {                                     // ② 写：设计计划（生成前）
-    "identity_anchor": "40-yo East Asian man, …", // 仅 character：锁脸/锁形（英文，全 look 复用）
-    "spec_prompt": "炭灰长袍领航装 …",             // 锁定设计描述（outfit / scene desc / prop desc）
-    "parent": null,                               // look 演化（chest_reveal.parent = "default"）
-    "planned_episodes": ["第1集_开篇", "…"]        // ② 预判会出现在哪些集
-  },
-
-  "realized": {                                   // ⑤ 写：真资产（status=generated 才有）
-    "source": "generate",                         // generate新生 | reuse复用 | edit在源上改
-    "derived_from": null,                         // reuse/edit 时指向源 asset_id
-    "path": "characters/navigator_k__default.png",// 相对 assets/ 的路径
-    "size": "1088x1920",
-    "gen_prompt": "8K hyper-realistic …",         // 真正喂出图模型的完整 prompt（存档可复现）
-    "locked_features": "…真图实际锁住的五官/配色…", // 回写，覆盖 intent
-    "palette": ["#C8581F", "…"],                  // 提取/锁定色（color_card 必有，其它可选）
-    "binds": {"#4FC3D9": "机改青电弧眼"},          // 仅 color_card：HEX → 元素
-    "composes": ["char.navigator_k.default", "scene.noah_ark_interior_hall.dim"], // 仅 blocking：合成了哪些锚
-    "first_episode": "第1集_开篇"                  // 首次生成于哪集
-  },
-
-  "used_by": [                                    // 结构化使用记录（跨全剧；复用只在此追加，不新增资产条目）
-    {"episode": "第1集_开篇", "group": "第一组", "shot": "1-003"},
-    {"episode": "第1集_开篇", "group": "第一组", "shot": "1-004"}
-  ]
+  "asset_id":"char.su_xiaoqi.default", "category":"character", "kind":"human",
+  "id":"su_xiaoqi", "display_name":"苏小七", "look":"default",
+  "ref_token":"@[char:su_xiaoqi|look:default]", "status":"planned",
+  "faction":"su_family",
+  "intent": {
+    "sheet_spec": {
+      "identity_anchor":"17-yo rural Han Chinese girl, …（一句英文锁脸，同角色各 look 逐字一致）",
+      "ethnicity":"authentic rural Han Chinese teenager …",
+      "physique":"slender petite …", "aura":"humble earnest quietly resilient",
+      "face":{ "cheekbones":"…","eyes":"large bright black eyes behind black-framed glasses, NOT Western/K-pop",
+               "hair":"straight black shoulder-length","skin":"fair slightly sun-touched, no makeup",
+               "nose":"small natural East-Asian","brows":"soft natural black","skin_detail":"fresh young skin" },
+      "scars":"none", "hair":"straight black shoulder-length, plain",
+      "headwear":"none (black-framed glasses)",
+      "upper":"faded modest thin knit top, threadbare neat",
+      "lower":"loose worn trousers + worn muddy little white canvas sneakers",
+      "mod":"none", "weapons":{ "primary":"none","secondary":"none","ranged":"none" },
+      "palette":"muted humble rural tones …",
+      "pose":"standing plainly, hand adjusting glasses",
+      "lighting":"soft warm natural studio light, gentle side key + soft fill (NOT noir/hard-rim)",
+      "style_ref":"authentic contemporary rural China youth drama",
+      "anti":["Western face","K-pop idol","网红/整容脸","anime","model-thin glam","harsh noir rim light"]
+    },
+    "parent":null, "planned_episodes":["第1集_绝望降临","…"]
+  }
 }
 ```
+- `sheet_spec` 字段 ↔ `drama-asset-gen/references/character-sheet-template.md` 的 `{占位}` 一一对应；③ 据此填模板出多面板参考表。
+- **`lighting` 是可调参数**：明亮暖剧=柔和自然暖光；黑深/战争剧=硬单边轮廓光。
+- 同角色各 look 一条独立资产，`identity_anchor` 与 `face` 在它们间逐字一致。
 
-- `used_by[]` 每条 = `{episode, group, shot}`：`episode` 用集目录名，`group` 用组名/序，`shot` 用镜号 `<集序>-<三位镜序>`（如 `1-003`）。**这是登记"哪集哪组哪镜用了它"的唯一结构化出口**——复用时只往这里加一条，不复制资产。
-- 角色叙事（bio / 弧光 / 世界观）**不进**资产登记，留在 `bible/人物背景.md` 等人读文件（它不被机器步骤消费）。
-
-## 2. 每集清单 `<集>/资产清单.json`（本集自包含视图）
-
+## 4. scene / prop 资产 item
 ```json
-{
-  "episode": "第1集_开篇",
-  "uses": [
-    { "asset_id": "char.navigator_k.default", "category": "character",
-      "ref_token": "@[char:navigator_k|look:default]",
-      "path": "characters/navigator_k__default.png",
-      "source": "reuse",                          // 本集是首次新生(generate) 还是复用(reuse)
-      "used_in_shots": ["1-003", "1-004"] }
-  ]
-}
+{ "asset_id":"scene.rural_stone_path.dusk", "category":"scene", "id":"rural_stone_path",
+  "display_name":"乡间石板路·黄昏", "look":"dusk", "ref_token":"@[scene:rural_stone_path|look:dusk]",
+  "status":"planned",
+  "intent":{ "spec_prompt":"a rural stone-slab path covered with rotting leaves … at dusk, warm golden backlit",
+             "parent":null, "planned_episodes":["第1集_绝望降临"] } }
 ```
+道具同理（`@[prop:<id>]`，look 可省）。会被④用来生成草图板的特殊道具（如中文 HUD）也在③出。
 
-- 全局 `bible.json` 是权威；`资产清单.json` 是 ⑤ 在产该集时一并写出的**派生视图**，供 ⑥ 直接拼这一集。人读版另出 `资产清单.md`。
+## 5. ④ 的绑定 `资产绑定.json`（喂⑤；色卡/草图板在此首次以 ref_token 出现）
+```json
+{ "drama":"…","episode":"…",
+  "assets": { "@[board:ep1_1A]":"<集>/分段/scenes/SEG-1A_草图板.png",
+              "@[palette:ep1_s1_dusk]":"<集>/分段/scenes/色卡_石板路黄昏.png",
+              "@[char:su_xiaoqi|look:default]":"assets/characters/苏小七.png", "...":"..." },
+  "segments": [
+    { "seg":"SEG-1A","title":"…","scene":"…","duration_s":12,"ratio":"16:9","prose_ref":"…#SEG-1A",
+      "ref_set":[ {"token":"@[board:ep1_1A]","role":"storyboard","why":"构图主引导"},
+                  {"token":"@[palette:ep1_s1_dusk]","role":"palette","why":"配色"} ] } ] }
+```
+- `ref_set` **有序** = 送 SD2 的 reference_image 顺序，`@[board:]` **永远第1**。
 
-## 3. 命名约定
-
-| category | `asset_id` | `ref_token`（④ 槽位） | 键 |
-|---|---|---|---|
-| character | `char.<id>.<look>` | `@[char:<id>\|look:<look>]` | id+look |
-| scene | `scene.<id>.<look>` | `@[scene:<id>\|look:<look>]` | id+look |
-| prop | `prop.<id>[.<look>]` | `@[prop:<id>]` | id（+look） |
-| color_card | `color.<集序>-g<组序>` | `@[color:<集序>-g<组序>]` | 组 scope（如 `1-g1`） |
-| blocking | `blk.<镜号>` | `@[blocking:<镜号>]` | 镜号（如 `1-003`） |
-
-## 4. 各 category 用哪些字段
-
-| category | 可复用? | intent 关键字段 | realized 关键字段 |
-|---|---|---|---|
-| **character**（含生物/机械） | 是（id+look） | identity_anchor, spec_prompt(outfit), parent | path, gen_prompt, locked_features |
-| **scene** | 是（id+look） | spec_prompt(desc) | path, gen_prompt, locked_features |
-| **prop** | 是（id） | spec_prompt(desc) | path, gen_prompt |
-| **color_card** | 可被邻组复用 | palette 计划（可空） | path, **palette[]**, **binds{}** |
-| **blocking**（空间站位） | 否（逐镜） | 一般空（按需生） | path, **composes[]** |
-
-- **character 首次生成 = 完整身份锚**（全身/中性/锁脸），不是"只生本镜露出的局部"，否则后续镜复用不了。
-- **color_card** 对标万物生"EP-SEG 13色卡"：逐组一张、每个 HEX 绑到具体元素（`binds`）。
-- **blocking** 由 `composes` 列出的人物/场景锚**合成**出本镜站位图。
-
-## 5. 谁写谁读
-
+## 6. 谁写谁读
 | 阶段 | 对 schema 的动作 |
 |---|---|
-| **② drama-bible** | 通读全剧，写 `intent` 层 + `status:"planned"`（character/scene/prop 的设计计划；color_card/blocking 一般不预生） |
-| **④ drama-shot-prompt** | **只读**：按 `display_name→id→look` 取 `ref_token` 写进提示词槽位；不写资产 |
-| **⑤ drama-asset-gen** | 读 ④ 槽位 → 全局有 generated 就 `reuse`、没有就 `generate`、变体 `edit`；回写 `realized` + 翻 `status:"generated"` + 追加 `used_by` + 写每集 `资产清单.json` |
-| **⑥ SD2 请求** | **只读**：从 `资产清单.json` 取 path/ref_token 拼 Seedance 请求 |
+| **② drama-bible** | 通读全剧，写 `intent`（含人物 `sheet_spec`）+ `factions[]` + `status:"planned"` |
+| **③ drama-asset-gen** | 只读 bible → 出多面板角色参考表/场景/道具 → 写 `asset_registry.json`（已生成层）；同阵营走编辑模式 |
+| **④ drama-segment** | 只读 bible + assets/ → 切段、产色卡(`@[palette:]`)/草图板(`@[board:]`) → 写 `资产绑定.json`（含两类新资产 path + 每段有序 ref_set） |
+| **⑤ drama-sd2-request** | 只读 `资产绑定.json` + 段prose + 蓝图 → 每段 text=prose + reference_images=ref_set 解析（板第1）拼 Seedance 请求 |
+
+## 7. registry（已生成层日志，③④ 各一份）
+`asset_registry.json`：`{drama,style,updated_at,total,success,failed,assets:[{name,category,char_id,look,path,size,provider,prompt,used_by?}]}`。generate_images.py 自动维护；`size` 出图后读 PNG 回写实际画幅。

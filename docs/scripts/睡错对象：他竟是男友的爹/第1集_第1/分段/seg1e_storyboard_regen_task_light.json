@@ -1,0 +1,14 @@
+[
+  {
+    "name": "SEG-1E_草图板_清晨身份证物",
+    "category": "scene",
+    "size": "1920x1088",
+    "quality": "medium",
+    "display_name": "SEG-1E 清晨身份证物草图板",
+    "design": "light retry: storyboard updated to use regenerated father-son photo frame prop with current Ethan/Jasper identities",
+    "ref": [
+      "/Users/limeng/Documents/Spec_Coding/drama-workflow/docs/scripts/睡错对象：他竟是男友的爹/assets/props/father_son_photo_frame.png"
+    ],
+    "prompt": "Create a clean pure-white hand-drawn pencil storyboard sheet, 16:9. Use the attached updated father-son photo frame prop as the exact prop reference. The storyboard must be graphite pencil on clean white paper with black frame borders and red pencil annotations only.\n\nLayout: 3 columns x 2 rows: PANEL 1, PANEL 2, PANEL 3, PANEL 4, SHOOTING PLAN, NOTES. Each panel is a 16:9 inner frame with caption strip.\n\nTitle: CUO AI EP1 - SEG-1E - 清晨身份证物. Subtitle: 4 SHOTS / morning living room / updated Ethan + Jasper photo frame reveal.\n\nPANEL 1 SHOT 1: wide cold morning penthouse living room, Oliver wakes stiffly on sofa under pale fabric, non-explicit. Caption includes: OLIVER OS: '好痛，昨晚折腾到后半夜，真是有够累的。'\nPANEL 2 SHOT 2: close reaction, Oliver sees Ethan sleeping nearby and freezes in shock, no body detail.\nPANEL 3 SHOT 3: extreme close-up focus-pull to the UPDATED father-son photo frame on windowsill, matching the attached prop. The tiny photo inside must read as Ethan (mature white father, dark swept-back hair with grey temples) and Jasper (adult white son, wavy medium brown hair). Red pencil callout: ETHAN + JASPER. Caption includes: OLIVER: '我睡了贾斯帕的父亲？'\nPANEL 4 SHOT 4: insert on black marble showing only the red restraint prop set from reference--satin red eye mask, metal handcuffs, red strapped ball-shaped mouthpiece, red feather wand--plus plain clothes and Oliver's trembling hand. No shoes, candles, cups, lace, flowers, or extra props. Caption includes: OLIVER: '老天，我到底做了什么'\nSHOOTING PLAN: top-down living room with sofa, window, updated photo frame on sill, Oliver path, camera triangles S1-S4, red 180-degree axis.\nNOTES: updated frame uses current Ethan/Jasper identities; adult non-explicit aftermath only.\n\nHard constraints: clean pure white paper, no yellow/aged/kraft tone, graphite greyscale only, red pencil annotations only, no digital painting, no 3D, no photoreal panels, no explicit sex, no nudity detail, no genitals, no nipples, no pornographic pose, no watermark, readable captions."
+  }
+]

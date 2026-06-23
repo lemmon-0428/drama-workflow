@@ -28,6 +28,7 @@ import base64
 import json
 import os
 import re
+import struct
 import sys
 import time
 from pathlib import Path
@@ -37,7 +38,17 @@ import httpx
 DEFAULT_ORDER = ["micu", "packy", "moyu"]
 DEFAULT_QUALITY = "medium"
 
+# API key / URL 从同目录的 gitignored `_secrets.py` 读（不进 git）。
+# env 同名变量优先 → 其次 _secrets 内置 → 都没有则该渠道跳过。
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    from _secrets import KEYS as BUILTIN_KEYS, MOYU_URL as BUILTIN_MOYU_URL
+except ImportError:  # 没有 _secrets.py（如别人 clone）→ 全走 env
+    BUILTIN_KEYS, BUILTIN_MOYU_URL = {}, ""
+
 CATEGORY_DIRS = {"character": "characters", "scene": "scenes", "prop": "props"}
+# 默认画幅（task 没传 size 时按 category 自动定）：人物 9:16 / 场景·站位图 16:9 / 道具 1:1
+CATEGORY_SIZES = {"character": "1088x1920", "scene": "1920x1088", "shot": "1920x1088", "prop": "1024x1024"}
 MIME_BY_EXT = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
                ".webp": "image/webp", ".gif": "image/gif"}
 EXT_BY_MIME = {"image/png": "png", "image/jpeg": "jpg", "image/webp": "webp", "image/gif": "gif"}
@@ -180,6 +191,19 @@ def download_image(value: str) -> bytes:
     return base64.b64decode(value)
 
 
+def read_png_size(path: Path):
+    """读 PNG 实际像素尺寸（IHDR），返回 'WxH'；非 PNG / 读失败返回 None。
+    渠道（尤其 micu 走固定枚举）实际出图常 ≠ 请求 size，台账要记实际值。"""
+    try:
+        head = path.read_bytes()[:24]
+    except OSError:
+        return None
+    if head[:8] == b"\x89PNG\r\n\x1a\n" and head[12:16] == b"IHDR":
+        w, h = struct.unpack(">II", head[16:24])
+        return f"{w}x{h}"
+    return None
+
+
 # --------------------------------------------------------------------- micu
 def _micu_base() -> str:
     return (os.getenv("IMAGE2_BASE_URL") or "https://www.micuapi.ai").rstrip("/")
@@ -234,7 +258,7 @@ def packy_edit(key, prompt, size, quality, refs, timeout):
 
 # --------------------------------------------------------------------- moyu
 def _moyu_base() -> str:
-    return (os.getenv("MOYU_BASE_URL") or "").rstrip("/")
+    return (os.getenv("MOYU_BASE_URL") or BUILTIN_MOYU_URL).rstrip("/")
 
 
 def moyu_generate(key, prompt, size, quality, timeout):
@@ -276,8 +300,8 @@ def load_refs(ref_spec, output_dir: Path):
 def run_task(task: dict, output_dir: Path, order: list, episode: str = "") -> dict:
     name = task["name"]
     prompt = task["prompt"]
-    size = task.get("size", "1024x1024")
     category = task.get("category", "character")
+    size = task.get("size") or CATEGORY_SIZES.get(category, "1024x1024")
     quality = str(task.get("quality") or DEFAULT_QUALITY).lower()
     ref_spec = task.get("ref") or []
 
@@ -310,9 +334,9 @@ def run_task(task: dict, output_dir: Path, order: list, episode: str = "") -> di
         cfg = PROVIDERS.get(prov)
         if not cfg:
             continue
-        key = os.getenv(cfg["key_env"], "").strip()
+        key = os.getenv(cfg["key_env"], "").strip() or BUILTIN_KEYS.get(prov, "")
         if not key:
-            errors[prov] = f"缺少 {cfg['key_env']}"
+            errors[prov] = f"缺少 {cfg['key_env']}（且无内置 key）"
             continue
         if cfg.get("size_ok") and not cfg["size_ok"](size):
             errors[prov] = f"尺寸 {size} 不满足渠道约束（≤3840px、16的倍数、长短比≤3:1、像素65万~829万）"
@@ -326,7 +350,13 @@ def run_task(task: dict, output_dir: Path, order: list, episode: str = "") -> di
             if not value:
                 raise RuntimeError("响应中没有图片")
             filepath.write_bytes(download_image(value))
-            return {**record, "status": "success", "mode": mode, "provider": prov}
+            out = {**record, "status": "success", "mode": mode, "provider": prov}
+            actual = read_png_size(filepath)        # B：台账记实际画幅
+            if actual:
+                if actual != size:
+                    out["size_requested"] = size    # 渠道枚举导致实际≠请求时留痕
+                out["size"] = actual
+            return out
         except Exception as e:
             errors[prov] = str(e)[:300]
             continue
@@ -341,16 +371,19 @@ def main():
     parser.add_argument("--episode", default="", help="本次生成所属的集（目录名），记录资产出处与复用")
     parser.add_argument("--drama", default="", help="剧名（写入台账顶层，可选）")
     parser.add_argument("--style", default="", help="全剧统一画风（写入台账顶层，可选）")
+    parser.add_argument("--reuse", default="",
+                        help="JSON array of 复用资产 {category,name} —— 命中台账即把本集追加进 used_by，不出图")
     args = parser.parse_args()
 
     order = [p.strip() for p in (os.getenv("IMAGE2_PROVIDER_ORDER") or ",".join(DEFAULT_ORDER)).split(",") if p.strip()]
-    available = [p for p in order if os.getenv(PROVIDERS.get(p, {}).get("key_env", ""), "").strip()]
+    available = [p for p in order if os.getenv(PROVIDERS.get(p, {}).get("key_env", ""), "").strip() or BUILTIN_KEYS.get(p)]
     if not available:
         print(f"ERROR: 渠道 {order} 都没有配置 API key（需要 IMAGE2_API_KEY / PACKY_API_KEY / MOYU_API_KEY 之一）", file=sys.stderr)
         sys.exit(1)
     print(f"渠道顺序: {' → '.join(order)}（已配置: {', '.join(available)}）")
 
     tasks = json.loads(args.tasks)
+    reuse_items = json.loads(args.reuse) if args.reuse else []
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -367,7 +400,7 @@ def main():
 
     # 库资产合并进台账；站位图(category==shot)不进库台账
     lib_results = [r for r in results if r.get("category") != "shot"]
-    if lib_results:
+    if lib_results or reuse_items:
         registry_path = output_dir / "asset_registry.json"
         registry, merged = {}, {}
         if registry_path.exists():
@@ -389,6 +422,17 @@ def main():
             if used_by:
                 asset["used_by"] = used_by
             merged[key] = asset
+
+        # A：复用资产（本集命中、不重新出图）也把本集追加进 used_by
+        for ri in reuse_items:
+            rkey = (ri.get("category"), ri.get("name") or ri.get("char_id"))
+            if rkey in merged and args.episode:
+                ex = merged[rkey]
+                ex["used_by"] = list(dict.fromkeys((ex.get("used_by") or []) + [args.episode]))
+                merged[rkey] = ex
+                print(f"  ↺ 复用 {rkey[1]} → used_by {ex['used_by']}")
+            elif rkey not in merged:
+                print(f"  ⚠ 复用项 {rkey} 不在台账（应先生成过），跳过")
 
         assets = list(merged.values())
         registry.update({

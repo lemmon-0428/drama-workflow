@@ -1,0 +1,359 @@
+{
+  "drama": "步步生金",
+  "episode": "第1集_绝望降临",
+  "_note": "每段 ref_set 有序=送SD2的reference_image顺序，@[board:]永远第1。色卡按场景复用。",
+  "assets": {
+    "@[board:ep1_1A]": "第1集_绝望降临/分段/scenes/SEG-1A_草图板_魔鬼的步伐.png",
+    "@[board:ep1_1B]": "第1集_绝望降临/分段/scenes/SEG-1B_草图板_把世界踩在脚下.png",
+    "@[board:ep1_2A]": "第1集_绝望降临/分段/scenes/SEG-2A_草图板_村口的羞辱.png",
+    "@[board:ep1_2B]": "第1集_绝望降临/分段/scenes/SEG-2B_草图板_贫困的泥沼.png",
+    "@[board:ep1_2C]": "第1集_绝望降临/分段/scenes/SEG-2C_草图板_奇迹试走.png",
+    "@[board:ep1_3A]": "第1集_绝望降临/分段/scenes/SEG-3A_草图板_进城卖簸箕.png",
+    "@[board:ep1_3B]": "第1集_绝望降临/分段/scenes/SEG-3B_草图板_商场刷卡.png",
+    "@[board:ep1_3C]": "第1集_绝望降临/分段/scenes/SEG-3C_草图板_书店朗读.png",
+    "@[board:ep1_3D]": "第1集_绝望降临/分段/scenes/SEG-3D_草图板_父亲的手.png",
+    "@[board:ep1_3E]": "第1集_绝望降临/分段/scenes/SEG-3E_草图板_坚毅转场.png",
+    "@[palette:ep1_s1_dusk]": "第1集_绝望降临/分段/scenes/色卡_石板路黄昏.png",
+    "@[palette:ep1_s2_village]": "第1集_绝望降临/分段/scenes/色卡_村口.png",
+    "@[palette:ep1_s2_home]": "第1集_绝望降临/分段/scenes/色卡_苏家日夜.png",
+    "@[palette:ep1_s2_woods]": "第1集_绝望降临/分段/scenes/色卡_小河边树林.png",
+    "@[palette:ep1_s3_mall]": "第1集_绝望降临/分段/scenes/色卡_高档商场.png",
+    "@[palette:ep1_s3_bookstore]": "第1集_绝望降临/分段/scenes/色卡_书店晨光.png",
+    "@[palette:ep1_s3_roadside]": "第1集_绝望降临/分段/scenes/色卡_市区马路边.png",
+    "@[char:su_xiaoqi|look:default]": "assets/characters/苏小七.png",
+    "@[char:su_father|look:default]": "assets/characters/苏父.png",
+    "@[char:su_mother|look:default]": "assets/characters/苏母.png",
+    "@[char:li_shu|look:default]": "assets/characters/李叔.png",
+    "@[prop:white_sneakers]": "assets/props/旧小白鞋.png",
+    "@[prop:system_hud]": "assets/props/进步系统面板.png",
+    "@[prop:bamboo_basket]": "assets/props/竹簸箕.png",
+    "@[prop:smartphone]": "assets/props/新手机.png",
+    "@[scene:rural_stone_path|look:dusk]": "assets/scenes/乡间石板路·黄昏.png",
+    "@[scene:village_entrance|look:default]": "assets/scenes/村口.png",
+    "@[scene:su_home|look:default]": "assets/scenes/苏家小院·日.png",
+    "@[scene:riverside_woods|look:default]": "assets/scenes/小河边·红豆杉树林.png",
+    "@[scene:upscale_mall|look:default]": "assets/scenes/高档商场·金店.png",
+    "@[scene:city_street_bookstore|look:default]": "assets/scenes/市区街道·新华书店门口.png",
+    "@[scene:city_roadside|look:default]": "assets/scenes/市区马路边·日.png"
+  },
+  "segments": [
+    {
+      "seg": "SEG-1A",
+      "title": "魔鬼的步伐",
+      "scene": "乡间石板路·黄昏",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "分量": "重点",
+      "prose_ref": "分段/段提示词.md#SEG-1A",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_1A]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s1_dusk]",
+          "role": "palette"
+        },
+        {
+          "token": "@[prop:white_sneakers]",
+          "role": "prop"
+        },
+        {
+          "token": "@[prop:system_hud]",
+          "role": "prop"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-1B",
+      "title": "把世界踩在脚下",
+      "scene": "乡间石板路·黄昏",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "分量": "重点",
+      "prose_ref": "分段/段提示词.md#SEG-1B",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_1B]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s1_dusk]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[prop:white_sneakers]",
+          "role": "prop"
+        },
+        {
+          "token": "@[prop:system_hud]",
+          "role": "prop"
+        },
+        {
+          "token": "@[scene:rural_stone_path|look:dusk]",
+          "role": "scene"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-2A",
+      "title": "村口的羞辱",
+      "scene": "村口",
+      "duration_s": 8,
+      "ratio": "16:9",
+      "分量": "常规",
+      "prose_ref": "分段/段提示词.md#SEG-2A",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_2A]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s2_village]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:li_shu|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[scene:village_entrance|look:default]",
+          "role": "scene"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-2B",
+      "title": "贫困的泥沼",
+      "scene": "苏家小院·日",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "分量": "重点",
+      "prose_ref": "分段/段提示词.md#SEG-2B",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_2B]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s2_home]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:su_mother|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[char:su_father|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[scene:su_home|look:default]",
+          "role": "scene"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-2C",
+      "title": "奇迹试走",
+      "scene": "小河边·红豆杉树林",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "分量": "常规",
+      "prose_ref": "分段/段提示词.md#SEG-2C",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_2C]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s2_woods]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[prop:white_sneakers]",
+          "role": "prop"
+        },
+        {
+          "token": "@[prop:system_hud]",
+          "role": "prop"
+        },
+        {
+          "token": "@[scene:riverside_woods|look:default]",
+          "role": "scene"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-3A",
+      "title": "进城卖簸箕",
+      "scene": "市区街道·新华书店门口",
+      "duration_s": 9,
+      "ratio": "16:9",
+      "分量": "常规",
+      "prose_ref": "分段/段提示词.md#SEG-3A",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_3A]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s3_roadside]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:su_father|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[prop:bamboo_basket]",
+          "role": "prop"
+        },
+        {
+          "token": "@[scene:city_street_bookstore|look:default]",
+          "role": "scene"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-3B",
+      "title": "商场刷卡",
+      "scene": "高档商场·金店",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "分量": "常规",
+      "prose_ref": "分段/段提示词.md#SEG-3B",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_3B]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s3_mall]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[prop:system_hud]",
+          "role": "prop"
+        },
+        {
+          "token": "@[scene:upscale_mall|look:default]",
+          "role": "scene"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-3C",
+      "title": "书店朗读",
+      "scene": "市区街道·新华书店门口",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "分量": "常规",
+      "prose_ref": "分段/段提示词.md#SEG-3C",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_3C]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s3_bookstore]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[prop:system_hud]",
+          "role": "prop"
+        },
+        {
+          "token": "@[scene:city_street_bookstore|look:default]",
+          "role": "scene"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-3D",
+      "title": "父亲的手",
+      "scene": "市区街道·新华书店门口",
+      "duration_s": 12,
+      "ratio": "16:9",
+      "分量": "重点",
+      "prose_ref": "分段/段提示词.md#SEG-3D",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_3D]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s3_bookstore]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:su_father|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[prop:smartphone]",
+          "role": "prop"
+        }
+      ]
+    },
+    {
+      "seg": "SEG-3E",
+      "title": "坚毅转场",
+      "scene": "市区马路边·日",
+      "duration_s": 8,
+      "ratio": "16:9",
+      "分量": "常规",
+      "prose_ref": "分段/段提示词.md#SEG-3E",
+      "ref_set": [
+        {
+          "token": "@[board:ep1_3E]",
+          "role": "storyboard"
+        },
+        {
+          "token": "@[palette:ep1_s3_roadside]",
+          "role": "palette"
+        },
+        {
+          "token": "@[char:su_xiaoqi|look:default]",
+          "role": "character"
+        },
+        {
+          "token": "@[scene:city_roadside|look:default]",
+          "role": "scene"
+        }
+      ]
+    }
+  ]
+}

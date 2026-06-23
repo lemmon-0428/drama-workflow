@@ -1,0 +1,16 @@
+[
+  {
+    "name": "SEG-1E_草图板_清晨身份证物",
+    "category": "scene",
+    "size": "1920x1088",
+    "quality": "high",
+    "display_name": "SEG-1E 清晨身份证物草图板",
+    "design": "edit retry: Panel 4 red aftermath props corrected to match red_restraint_set only",
+    "ref": [
+      "/Users/limeng/Documents/Spec_Coding/drama-workflow/docs/scripts/睡错对象：他竟是男友的爹/第1集_第1/分段/scenes/SEG-1E_草图板_清晨身份证物.png",
+      "/Users/limeng/Documents/Spec_Coding/drama-workflow/docs/scripts/睡错对象：他竟是男友的爹/assets/props/red_restraint_set.png",
+      "/Users/limeng/Documents/Spec_Coding/drama-workflow/docs/scripts/睡错对象：他竟是男友的爹/assets/props/father_son_photo_frame.png"
+    ],
+    "prompt": "Use case: precise-object-edit. Asset type: SD2 reference storyboard sheet. Input images: Image 1 is the existing SEG-1E storyboard to edit; Image 2 is the exact red restraint prop reference; Image 3 is the updated father-son photo frame prop reference.\n\nPrimary request: edit the existing storyboard sheet while preserving its clean pure-white hand-drawn pencil storyboard style, 3 columns x 2 rows layout, title, caption strips, PANEL 1, PANEL 2, PANEL 3, SHOOTING PLAN, and NOTES as much as possible. The correction is focused on the second row first cell: PANEL 4 / SHOT 4.\n\nRequired edit for PANEL 4 / SHOT 4: remove every incorrect object that is not in Image 2, including high-heeled shoes, candles, cups/glasses, lace/flower/garter-like objects, extra decorative items, and any unrelated prop. Replace that cell with a black marble floor insert showing only the red prop set from Image 2 rendered as storyboard line art: satin red eye mask with ribbon tails, metal handcuffs, red strapped ball-shaped mouthpiece, and red feather wand. Keep a simple grey clothing/cloth pile and Oliver's trembling hand gathering clothes. No shoes of any kind. No candles. No cups. No lace lingerie. No flower shapes. No extra props.\n\nPanel 4 caption should communicate: SHOT4 - INSERT 50mm / red eye mask, metal handcuffs, red ball strap and feather wand from prop reference; Oliver gathers clothes / OLIVER: '老天，我到底做了什么'. Red pencil callouts may label RED PROP SET ONLY.\n\nPreserve PANEL 3 identity clue: the father-son photo frame should still match Image 3, showing current Ethan as mature white father and Jasper as adult white son, with the ETHAN + JASPER callout.\n\nStyle/medium: graphite pencil line art and greyscale cross-hatching on clean pure white storyboard paper; black ink frames and captions; red pencil annotations only. Keep the sheet non-photoreal as a production storyboard, not a rendered scene.\n\nConstraints: adult non-explicit aftermath only; no sex act, no nudity detail, no genitals, no nipples, no pornographic pose, no watermark. Do not introduce any new prop category beyond the red eye mask, handcuffs, red strapped ball-shaped mouthpiece, red feather wand, plain clothing/cloth, and Oliver's hand. Keep readable captions and the 16:9 overall canvas."
+  }
+]

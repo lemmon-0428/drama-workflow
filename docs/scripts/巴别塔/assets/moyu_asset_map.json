@@ -1,0 +1,98 @@
+{
+  "assets/characters/old_man.png": {
+    "display_name": "老人",
+    "kind": "库资产",
+    "上传名": "characters_old_man.png",
+    "moyu_id": "asset-20260620231742-7l979"
+  },
+  "assets/characters/navigator_k.png": {
+    "display_name": "领航员K",
+    "kind": "库资产",
+    "上传名": "characters_navigator_k.png",
+    "moyu_id": "asset-20260620230202-d9lrp"
+  },
+  "assets/characters/monk_robot.png": {
+    "display_name": "机器僧",
+    "kind": "库资产",
+    "上传名": "characters_monk_robot.png",
+    "moyu_id": "asset-20260620232122-p478g"
+  },
+  "assets/characters/burly_man.png": {
+    "display_name": "男人",
+    "kind": "库资产",
+    "上传名": "characters_burly_man.png",
+    "moyu_id": "asset-20260620232326-qd9dg"
+  },
+  "assets/characters/woman.png": {
+    "display_name": "女人",
+    "kind": "库资产",
+    "上传名": "characters_woman.png",
+    "moyu_id": "asset-20260620232524-znvrx"
+  },
+  "assets/scenes/noah_ark_hall.png": {
+    "display_name": "诺亚方舟内部大厅",
+    "kind": "库资产",
+    "上传名": "scenes_noah_ark_hall.png",
+    "moyu_id": "asset-20260620232752-mbmmw"
+  },
+  "assets/shots/第2集_乘客/1.png": {
+    "display_name": "站位图镜1",
+    "kind": "站位图",
+    "上传名": "shots_第2集_乘客_1.png",
+    "moyu_id": "asset-20260620233008-6j8xm"
+  },
+  "assets/shots/第2集_乘客/4.png": {
+    "display_name": "站位图镜4",
+    "kind": "站位图",
+    "上传名": "shots_第2集_乘客_4.png",
+    "moyu_id": "asset-20260620233210-2xs5d"
+  },
+  "assets/shots/第2集_乘客/5.png": {
+    "display_name": "站位图镜5",
+    "kind": "站位图",
+    "上传名": "shots_第2集_乘客_5.png",
+    "moyu_id": "asset-20260620233529-qhxg4"
+  },
+  "assets/shots/第2集_乘客/7.png": {
+    "display_name": "站位图镜7",
+    "kind": "站位图",
+    "上传名": "shots_第2集_乘客_7.png",
+    "moyu_id": "asset-20260620233822-2ht29"
+  },
+  "assets/props/dashboard_redlight.png": {
+    "display_name": "仪表盘红灯",
+    "kind": "库资产",
+    "上传名": "props_dashboard_redlight.png",
+    "moyu_id": "asset-20260620234051-n4hzj"
+  },
+  "assets/shots/第2集_乘客/13.png": {
+    "display_name": "站位图镜13",
+    "kind": "站位图",
+    "上传名": "shots_第2集_乘客_13.png",
+    "moyu_id": "asset-20260620234319-jfkwt"
+  },
+  "assets/shots/第2集_乘客/15.png": {
+    "display_name": "站位图镜15",
+    "kind": "站位图",
+    "上传名": "shots_第2集_乘客_15.png",
+    "moyu_id": "asset-20260620234522-ldqzb"
+  },
+  "assets/scenes/wasteland_exterior.png": {
+    "display_name": "图片1",
+    "kind": "库资产",
+    "上传名": "scenes_wasteland_exterior.png",
+    "moyu_id": "asset-20260621001116-g6qq6"
+  },
+  "assets/props/noah_ark.png": {
+    "display_name": "图片2",
+    "kind": "库资产",
+    "上传名": "props_noah_ark.png",
+    "moyu_id": "asset-20260621001239-lnhcl"
+  },
+  "assets/shots/第1集_开篇/1-013.png": {
+    "display_name": "站位图镜13",
+    "kind": "站位图",
+    "上传名": "shots_第1集_开篇_1-013.png",
+    "moyu_id": "asset-20260621003219-bwsxm"
+  }
+}

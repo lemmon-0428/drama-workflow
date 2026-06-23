@@ -1,0 +1,17 @@
+[
+  {
+    "name": "father_son_photo_frame",
+    "category": "prop",
+    "size": "1024x1024",
+    "quality": "high",
+    "char_id": "father_son_photo_frame",
+    "look": "default",
+    "display_name": "父子合照相框",
+    "design": "updated identity-locked father-and-adult-son photo frame using current Ethan and Jasper character reference sheets",
+    "ref": [
+      "characters/ethan.png",
+      "characters/jasper.png"
+    ],
+    "prompt": "EDIT MODE: Use the two attached character reference sheets as identity anchors. The first reference is Ethan, the father: mature white man in his mid 50s, commanding handsome face, dark hazel-brown eyes, thick swept-back dark brown hair with faint grey at the temples, broad mature build, black/charcoal luxury suit and white shirt. The second reference is Jasper, the adult son: white man in his early 30s, refined cool pale face, light blue-gray eyes, wavy medium brown hair swept back with loose volume, tall slim tailored build, deep navy/charcoal designer suit. Preserve these two identities in the small formal photograph inside the frame. Do not make either face Asian. Do not invent a different father or son.\n\nCreate a 1:1 photorealistic prop board: an expensive black-silver metal photo frame on a luxury penthouse windowsill, reflective glass, cold morning daylight and faint city light behind it. Inside the frame is a formal father-and-adult-son portrait of Ethan and Jasper together: Ethan stands or sits slightly behind/left with composed paternal authority; Jasper stands or sits slightly forward/right with elite controlled posture. The portrait should be visible enough to read them as the same two men from the references, but still naturally embedded behind glossy frame glass as an in-world photograph prop. Elegant urban family portrait, wealthy noir melodrama identity clue.\n\nSTYLE: [STYLE LOCK]（全集统一·每段复用）\n写实真人电影感 / photoreal live-action cinematic；成人都市情感悬疑短剧，现代顶层公寓，黑金奢华空间、玻璃反射、壁炉火光、城市夜景、清晨冷白阳光。整体低调 noir 影调：夜戏低照度、高反差、暖金火光与深红道具点缀；日戏冷白曝光、清晰揭露秘密，不走温暖生活流。\n质感锚（反塑料感）：真实电影胶片颗粒 + 实景自然光/实际灯具 + 真实皮肤毛孔 + 真实丝绸/西装羊毛/皮革/玻璃/金属质感；照片级电影定格、真实镜头拍到的物理场景。不是 3D 渲染、不是 CG、不是塑料皮肤、不是动画、不是低俗色情图。\n\nComposition: centered product composition, close-up of the frame at a slight three-quarter angle; frame occupies most of the square canvas; reflective glass catches pale window light without obscuring the father-son portrait. The penthouse windowsill and blurred city daylight are visible as environment context.\nMaterials: brushed black-silver metal frame, real reflective glass, subtle fingerprints/specks on glass, polished stone windowsill, true photographic paper inside.\nHard constraints: 1:1 square prop board; same Ethan and Jasper identities from references; adult father and adult son only; no extra people; no readable text, no labels, no watermark, no logo; no caricature, no anime, no 3D render, no plastic skin; do not change ethnicity; no explicit content."
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "name": "ville_penthouse_living_room__morning_cold",
+    "category": "scene",
+    "char_id": "ville_penthouse_living_room",
+    "look": "morning_cold",
+    "parent": "night_dim",
+    "display_name": "The Ville 顶层公寓客厅·清晨",
+    "design": "the same modern minimalist luxury penthouse living room in The Ville in cold morning daylight, floor-to-ceiling windows filled with pale city light, low sofa, black marble, glass reflections, a photo frame on the windowsill, aftermath tension, secrets exposed by bright white sun, photoreal cinematic still",
+    "quality": "high",
+    "prompt": "the same modern minimalist luxury penthouse living room in The Ville in cold morning daylight, floor-to-ceiling windows filled with pale city light, low sofa, black marble, glass reflections, a photo frame on the windowsill, aftermath tension, secrets exposed by bright white sun, photoreal cinematic still\n\nSTYLE: [STYLE LOCK]（全集统一·每段复用）\n写实真人电影感 / photoreal live-action cinematic；成人都市情感悬疑短剧，现代顶层公寓，黑金奢华空间、玻璃反射、壁炉火光、城市夜景、清晨冷白阳光。整体低调 noir 影调：夜戏低照度、高反差、暖金火光与深红道具点缀；日戏冷白曝光、清晰揭露秘密，不走温暖生活流。\n质感锚（反塑料感）：真实电影胶片颗粒 + 实景自然光/实际灯具 + 真实皮肤毛孔 + 真实丝绸/西装羊毛/皮革/玻璃/金属质感；照片级电影定格、真实镜头拍到的物理场景。不是 3D 渲染、不是 CG、不是塑料皮肤、不是动画、不是低俗色情图。\nOutput a 16:9 photorealistic cinematic scene board, wide establishing shot, empty unoccupied space, no named characters, no human figures, real materials and textures, no text, no words, no signage text, no watermark, no logo."
+  },
+  {
+    "name": "jasper_bedroom_doorway__morning_reveal",
+    "category": "scene",
+    "char_id": "jasper_bedroom_doorway",
+    "look": "morning_reveal",
+    "display_name": "贾斯帕卧室门口·清晨撞破",
+    "design": "a luxury penthouse bedroom doorway and short hallway in cold morning light, minimalist black-white interior, concealed door frame, polished metal handle, pale bedding glimpsed inside, strong doorframe composition for a reveal, tense photoreal cinematic still",
+    "quality": "high",
+    "prompt": "a luxury penthouse bedroom doorway and short hallway in cold morning light, minimalist black-white interior, concealed door frame, polished metal handle, pale bedding glimpsed inside, strong doorframe composition for a reveal, tense photoreal cinematic still\n\nSTYLE: [STYLE LOCK]（全集统一·每段复用）\n写实真人电影感 / photoreal live-action cinematic；成人都市情感悬疑短剧，现代顶层公寓，黑金奢华空间、玻璃反射、壁炉火光、城市夜景、清晨冷白阳光。整体低调 noir 影调：夜戏低照度、高反差、暖金火光与深红道具点缀；日戏冷白曝光、清晰揭露秘密，不走温暖生活流。\n质感锚（反塑料感）：真实电影胶片颗粒 + 实景自然光/实际灯具 + 真实皮肤毛孔 + 真实丝绸/西装羊毛/皮革/玻璃/金属质感；照片级电影定格、真实镜头拍到的物理场景。不是 3D 渲染、不是 CG、不是塑料皮肤、不是动画、不是低俗色情图。\nOutput a 16:9 photorealistic cinematic scene board, wide establishing shot, empty unoccupied space, no named characters, no human figures, real materials and textures, no text, no words, no signage text, no watermark, no logo."
+  },
+  {
+    "name": "red_restraint_set",
+    "category": "prop",
+    "char_id": "red_restraint_set",
+    "look": "default",
+    "display_name": "红色亲密道具组",
+    "design": "a tasteful mature-drama still life prop set on dark marble: deep red satin blindfold, red leather ball gag, polished silver handcuffs, and a red feather wand, luxurious but ominous, no human body, no explicit sexual image, photoreal product-style cinematic lighting",
+    "quality": "high",
+    "prompt": "a tasteful mature-drama still life prop set on dark marble: deep red satin blindfold, red leather ball gag, polished silver handcuffs, and a red feather wand, luxurious but ominous, no human body, no explicit sexual image, photoreal product-style cinematic lighting\n\nSTYLE: [STYLE LOCK]（全集统一·每段复用）\n写实真人电影感 / photoreal live-action cinematic；成人都市情感悬疑短剧，现代顶层公寓，黑金奢华空间、玻璃反射、壁炉火光、城市夜景、清晨冷白阳光。整体低调 noir 影调：夜戏低照度、高反差、暖金火光与深红道具点缀；日戏冷白曝光、清晰揭露秘密，不走温暖生活流。\n质感锚（反塑料感）：真实电影胶片颗粒 + 实景自然光/实际灯具 + 真实皮肤毛孔 + 真实丝绸/西装羊毛/皮革/玻璃/金属质感；照片级电影定格、真实镜头拍到的物理场景。不是 3D 渲染、不是 CG、不是塑料皮肤、不是动画、不是低俗色情图。\nOutput a 1:1 photorealistic prop board, centered product composition, clean studio background, real materials and textures. No readable text or labels. no watermark, no logo."
+  },
+  {
+    "name": "father_son_photo_frame",
+    "category": "prop",
+    "char_id": "father_son_photo_frame",
+    "look": "default",
+    "display_name": "父子合照相框",
+    "design": "updated identity-locked father-and-adult-son photo frame using current Ethan and Jasper character reference sheets; black-silver metal frame, reflective glass, cold morning penthouse windowsill",
+    "quality": "high",
+    "prompt": "EDIT MODE identity note: this prop must use the current Ethan and Jasper identities if reference images are supplied. an expensive black-silver metal photo frame on a luxury penthouse windowsill, reflective glass, containing a formal father-and-adult-son photograph of Ethan and Jasper as the identity clue: Ethan is a mature white wealthy patriarch with thick swept-back dark brown hair and faint grey temples; Jasper is his adult white son with wavy medium-brown swept-back hair and refined pale elite face; photoreal close-up with glass reflection, cold morning penthouse daylight\n\nSTYLE: [STYLE LOCK]（全集统一·每段复用）\n写实真人电影感 / photoreal live-action cinematic；成人都市情感悬疑短剧，现代顶层公寓，黑金奢华空间、玻璃反射、壁炉火光、城市夜景、清晨冷白阳光。整体低调 noir 影调：夜戏低照度、高反差、暖金火光与深红道具点缀；日戏冷白曝光、清晰揭露秘密，不走温暖生活流。\n质感锚（反塑料感）：真实电影胶片颗粒 + 实景自然光/实际灯具 + 真实皮肤毛孔 + 真实丝绸/西装羊毛/皮革/玻璃/金属质感；照片级电影定格、真实镜头拍到的物理场景。不是 3D 渲染、不是 CG、不是塑料皮肤、不是动画、不是低俗色情图。\nOutput a 1:1 photorealistic prop board, centered product composition, clean studio background or penthouse windowsill context, real materials and textures. The father-and-adult-son photo inside the frame must read as Ethan + Jasper; no extra people; no readable text or labels; no watermark, no logo; no Asian faces."
+  }
+]

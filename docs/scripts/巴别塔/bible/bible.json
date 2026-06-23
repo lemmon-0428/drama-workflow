@@ -3,7 +3,12 @@
   "style": "8K 超写实真人电影感（AI真人科幻 / Dune·Interstellar）",
   "style_lock": "[STYLE LOCK]（全集统一·每组复用）\n8K 超写实真人电影感 / photoreal live-action cinematic；《沙丘 Dune》《星际穿越 Interstellar》级质感 + 东方禅意压抑；废土美学 × 心理惊悚 × 赛博科幻。\n影调：冷峻压抑的暗调，低饱和的灰土、锈褐、炭黑配冷蓝/暖橙逆光；大气尘霾与体积光；浅景深、电影级构图、克制的运镜。\n质感锚（反塑料感）：真实电影胶片颗粒 + 实景光 + 高光轻微光晕 + 大气尘霾 + 可触实体材质（旧布料/锈蚀金属/磨损皮革/真实皮肤毛孔）；照片级电影定格、透过真实镜头拍到的物理场景——不是 3D 渲染、不是 CG、不是塑料感、不是动画。",
   "logline": "末日废土上，最后一名'人类'领航员驾着诺亚方舟载着一具怀抱真心脏的机器僧与四名幸存者驶向新世界；因猜忌、权力与语言的扭曲，众人在密闭舱内自相残杀，而最终活下来的他自己竟也是一台被猜忌造出来的机器，独自驶入一座没有人类的巴别塔。",
-  "episodes": ["第1集_开篇", "第2集_乘客", "第3集_抉择", "第4集_倒塌"],
+  "episodes": [
+    "第1集_开篇",
+    "第2集_乘客",
+    "第3集_抉择",
+    "第4集_倒塌"
+  ],
   "assets": [
     {
       "asset_id": "char.navigator_k.default",
@@ -18,7 +23,12 @@
         "identity_anchor": "40-year-old East Asian man, weathered stoic face, deep-set tired eyes like an extinguished volcano, sharp cheekbones and a hard jawline, short cropped black hair flecked with grey, faint stubble, tall lean upright build",
         "spec_prompt": "dark charcoal layered long coat-robe over a high-collar technical tunic shirt, worn leather utility harness and belt, dark trousers tucked into heavy battered boots, ash-and-earth muted dusty palette, Dune-like wasteland navigator uniform, tactile worn fabric",
         "parent": null,
-        "planned_episodes": ["第1集_开篇", "第2集_乘客", "第3集_抉择", "第4集_倒塌"]
+        "planned_episodes": [
+          "第1集_开篇",
+          "第2集_乘客",
+          "第3集_抉择",
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -34,7 +44,9 @@
         "identity_anchor": "40-year-old East Asian man, weathered stoic face, deep-set tired eyes like an extinguished volcano, sharp cheekbones and a hard jawline, short cropped black hair flecked with grey, faint stubble, tall lean upright build",
         "spec_prompt": "the charcoal coat and tunic shirt calmly unbuttoned and opened at the chest, revealing an iron-grey metal compartment box built into his torso, packed with tangled wires and circuitry, a machine body revealed beneath human skin, not a wound",
         "parent": "default",
-        "planned_episodes": ["第4集_倒塌"]
+        "planned_episodes": [
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -50,7 +62,12 @@
         "identity_anchor": "a seated meditating humanoid robot monk, body of patchwork copper and weathered iron plates with exposed precision gears at the joints, smooth featureless faceplate with two hollow dark eye-sockets, no human skin, weathered rust-streaked metal",
         "spec_prompt": "draped in a flowing red Buddhist monk kasaya robe over the metal body, sitting cross-legged in lotus meditation posture, serene and still, rust-streaked copper-and-iron frame, exposed gears at the joints, hollow dark eye-sockets",
         "parent": null,
-        "planned_episodes": ["第1集_开篇", "第2集_乘客", "第3集_抉择", "第4集_倒塌"]
+        "planned_episodes": [
+          "第1集_开篇",
+          "第2集_乘客",
+          "第3集_抉择",
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -66,7 +83,11 @@
         "identity_anchor": "a gaunt elderly East Asian man in his 70s, deeply wrinkled sunken face, sparse wispy white hair and an unkempt thin white beard, rheumy bright fervent eyes, frail bony build",
         "spec_prompt": "layered ragged wasteland robe of grey-yellow weathered linen, frayed and patched in many places, a loose rope belt, exposed bony wrists, the humble shabby look of an end-times wandering preacher",
         "parent": null,
-        "planned_episodes": ["第2集_乘客", "第3集_抉择", "第4集_倒塌"]
+        "planned_episodes": [
+          "第2集_乘客",
+          "第3集_抉择",
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -82,7 +103,11 @@
         "identity_anchor": "a haggard woman in her early 30s, gaunt pale face with sharp features and high cheekbones, large frightened dark eyes, smudged worn makeup, long dark hair pulled back loosely, slender thin frame",
         "spec_prompt": "a fitted worn faded dark knit top under a ragged long coat or cloak, dark trousers and scuffed ankle boots, grimy muted palette with faint traces of trying to stay presentable, carries a small handheld mirror",
         "parent": null,
-        "planned_episodes": ["第2集_乘客", "第3集_抉择", "第4集_倒塌"]
+        "planned_episodes": [
+          "第2集_乘客",
+          "第3集_抉择",
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -98,7 +123,11 @@
         "identity_anchor": "a burly man in his late 30s, broad heavy-set face with a strong square jaw, thick dark stubble, deep-set angry brows, close-cropped dark hair, muscular thick neck and powerful build",
         "spec_prompt": "a heavy worn dark workwear jacket or leather vest over a dirty tank top exposing thick muscular arms, sturdy work trousers and heavy boots, a leather belt that can holster a handgun, oily rugged aggressive look",
         "parent": null,
-        "planned_episodes": ["第2集_乘客", "第3集_抉择", "第4集_倒塌"]
+        "planned_episodes": [
+          "第2集_乘客",
+          "第3集_抉择",
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -112,7 +141,9 @@
       "intent": {
         "spec_prompt": "exterior post-apocalyptic Earth at dusk, endless desert of sand dunes, ruined mud statues and crumbling walls of dead human civilization, smoke trailing to the horizon, a colossal carved giant human-face mountain rising from the sand as a monument, a spaceship-like Noah's Ark roaring across, Dune-like wasteland, atmospheric dust haze, long shadows, warm-cold backlit dusk",
         "parent": null,
-        "planned_episodes": ["第1集_开篇"]
+        "planned_episodes": [
+          "第1集_开篇"
+        ]
       }
     },
     {
@@ -126,7 +157,10 @@
       "intent": {
         "spec_prompt": "vast empty interior main hall of a Noah's Ark spaceship, dim moody and desolate, cool light pouring in from a huge floor-to-ceiling viewport onto the dead silent Earth, near-future sci-fi plus Eastern Zen minimalism, a raised elevated platform for the navigator's high seat, passenger compartment cabins around, an instrument dashboard, cold oppressive enclosed atmosphere, the shrunken Tower of Babel",
         "parent": null,
-        "planned_episodes": ["第1集_开篇", "第2集_乘客"]
+        "planned_episodes": [
+          "第1集_开篇",
+          "第2集_乘客"
+        ]
       }
     },
     {
@@ -140,7 +174,9 @@
       "intent": {
         "spec_prompt": "same vast Noah's Ark spaceship interior hall at night, moonlight through the viewport as the only light source, cold blue moonlight slicing the enclosed space, heavy deep shadows, tense suspicious claustrophobic mood",
         "parent": "dim",
-        "planned_episodes": ["第3集_抉择"]
+        "planned_episodes": [
+          "第3集_抉择"
+        ]
       }
     },
     {
@@ -154,7 +190,9 @@
       "intent": {
         "spec_prompt": "same vast Noah's Ark spaceship interior hall while moving, lights flickering on and off as if dying and barely hanging on, unstable strobing cabin light, claustrophobic psychological-thriller dread, gun smoke and blood tones",
         "parent": "dim",
-        "planned_episodes": ["第4集_倒塌"]
+        "planned_episodes": [
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -168,7 +206,9 @@
       "intent": {
         "spec_prompt": "a vast world built entirely by robots with no humans, a true monumental Tower of Babel, towering mechanical geometric spires piercing the sky, a cold cyber-mechanical megacity, grey cold metal tones, utterly devoid of any human trace, awe-inspiring and inhuman",
         "parent": null,
-        "planned_episodes": ["第4集_倒塌"]
+        "planned_episodes": [
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -181,7 +221,10 @@
       "intent": {
         "spec_prompt": "an old worn metal handgun, scratched gunmetal finish, K's pistol, the weapon behind the drama's three gunshots",
         "parent": null,
-        "planned_episodes": ["第3集_抉择", "第4集_倒塌"]
+        "planned_episodes": [
+          "第3集_抉择",
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -194,7 +237,9 @@
       "intent": {
         "spec_prompt": "a real living human heart still beating, sealed inside a transparent glass case, housed within the robot monk's opened chest cavity surrounded by metal and wires, the last vessel of humanity, eerie warm-red organic glow against cold metal",
         "parent": null,
-        "planned_episodes": ["第4集_倒塌"]
+        "planned_episodes": [
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -207,7 +252,9 @@
       "intent": {
         "spec_prompt": "a small portable cryo cold-storage box stowed under the seat, lid opening to reveal vials of medical agents and nutrient fluid, faint frost and cold vapor, used to replenish the robot monk's heart",
         "parent": null,
-        "planned_episodes": ["第4集_倒塌"]
+        "planned_episodes": [
+          "第4集_倒塌"
+        ]
       }
     },
     {
@@ -220,7 +267,41 @@
       "intent": {
         "spec_prompt": "a small worn handheld mirror the woman carries, cracked and smudged frame, the mirror she stares into while applying makeup that no longer exists",
         "parent": null,
-        "planned_episodes": ["第2集_乘客", "第3集_抉择", "第4集_倒塌"]
+        "planned_episodes": [
+          "第2集_乘客",
+          "第3集_抉择",
+          "第4集_倒塌"
+        ]
+      }
+    },
+    {
+      "asset_id": "prop.noah_ark",
+      "category": "prop",
+      "id": "noah_ark",
+      "display_name": "诺亚方舟",
+      "ref_token": "@[prop:noah_ark]",
+      "status": "planned",
+      "intent": {
+        "spec_prompt": "飞船般的近未来科幻金属船体、废土工业线条的诺亚方舟",
+        "parent": null,
+        "planned_episodes": [
+          "第1集_开篇"
+        ]
+      }
+    },
+    {
+      "asset_id": "prop.dashboard_redlight",
+      "category": "prop",
+      "id": "dashboard_redlight",
+      "display_name": "仪表盘红灯",
+      "ref_token": "@[prop:dashboard_redlight]",
+      "status": "planned",
+      "intent": {
+        "spec_prompt": "a flashing red fuel-warning indicator lamp on a near-future sci-fi control console panel, glowing urgent blinking red alert light, weathered metal dashboard, the warning light behind the ark's fuel crisis",
+        "parent": null,
+        "planned_episodes": [
+          "第2集_乘客"
+        ]
       }
     }
   ]

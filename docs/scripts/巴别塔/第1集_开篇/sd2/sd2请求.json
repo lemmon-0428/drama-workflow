@@ -1,0 +1,230 @@
+{
+  "episode": "第1集_开篇",
+  "drama": "巴别塔",
+  "model_code": "doubao-seedance-2-0-260128",
+  "task_type": "video",
+  "groups": [
+    {
+      "group": "第一组",
+      "组名": "末世人脸山",
+      "model_code": "doubao-seedance-2-0-260128",
+      "task_type": "video",
+      "params": {
+        "prompt": "[风格锁定]\n8K 超写实真人电影感 / photoreal live-action cinematic；《沙丘 Dune》《星际穿越 Interstellar》级质感 + 东方禅意压抑；废土美学 × 心理惊悚 × 赛博科幻。影调：冷峻压抑的暗调，低饱和的灰土、锈褐、炭黑配冷蓝/暖橙逆光；大气尘霾与体积光；浅景深、电影级构图、克制的运镜。质感锚：真实电影胶片颗粒 + 实景光 + 高光轻微光晕 + 大气尘霾 + 可触实体材质；照片级电影定格、透过真实镜头拍到的物理场景——不是 3D 渲染、不是 CG、不是塑料感、不是动画。\n\n[资产锚定]\n图片1 作为废土黄昏外景的视觉锚定。\n图片2 作为诺亚方舟的视觉锚定。\n\n[本组 15s，3镜硬切，按下文执行]\n镜头1（5s，大远景，24mm广角，高空极缓 tilt down）：场景 图片1，随俯角逐层揭示废土纵深——先是天际滚滚烟尘，俯到中段巨大人脸山雕像从无尽黄沙中浮现为视觉主体，前景最后铺满文明泥像断壁残垣。黄昏暖橙逆光斜照、大气尘霾、地面长阴影、体积光成束。\n镜头2（5s，大远景，135mm长焦压缩，横移跟拍）：诺亚方舟 图片2 轰鸣横越沙丘驶来，长焦把方舟与背景沙丘叠压成一体、扬起的尘浪贴船体翻卷，近未来科幻金属线条切开末日废土的苍黄。黄昏逆光勾船体金属轮廓高光边缘。\n镜头3（5s，全景，35mm，低机位仰拍斜移）：方舟 图片2 掠过巨大人脸山雕像前方、拖出长长沙尘尾迹；仰角把方舟压在画面下缘、让人脸山在上方撑满天空，渺小方舟与巍峨遗迹的体量对比隐喻一座缩小的巴别塔。金橙余晖泼洒、尘雾翻腾、体积光。\n\n[声音设计]\n风沙呼啸（底层持续）+ 引擎轰鸣由远及近（贯穿三镜的渐强骨架）+ 沙石翻滚。仅生成环境音效，不要背景音乐、不要人声。\n\n[关键约束]\n冷峻暗调废土美学，低饱和灰土/锈褐/炭黑配暖橙逆光，胶片颗粒+大气尘霾+体积光，《沙丘》级质感；非 3D 渲染、非 CG、非塑料感、非动画；无字幕、无水印。",
+        "duration": 15,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": true
+      },
+      "references": [
+        {
+          "label": "图片1",
+          "kind": "库资产",
+          "ref_token": "@[scene:wasteland_exterior|look:dusk]",
+          "display_name": null,
+          "path": "assets/scenes/wasteland_exterior.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        },
+        {
+          "label": "图片2",
+          "kind": "库资产",
+          "ref_token": "@[prop:noah_ark]",
+          "display_name": null,
+          "path": "assets/props/noah_ark.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        }
+      ],
+      "镜头": [
+        {
+          "镜号": 1,
+          "时长_秒": 5
+        },
+        {
+          "镜号": 2,
+          "时长_秒": 5
+        },
+        {
+          "镜号": 3,
+          "时长_秒": 5
+        }
+      ],
+      "_unresolved_tokens": []
+    },
+    {
+      "group": "第二组",
+      "组名": "方舟内·静默",
+      "model_code": "doubao-seedance-2-0-260128",
+      "task_type": "video",
+      "params": {
+        "prompt": "[风格锁定]\n8K 超写实真人电影感 / photoreal live-action cinematic；《沙丘 Dune》《星际穿越 Interstellar》级质感 + 东方禅意压抑；废土美学 × 心理惊悚 × 赛博科幻。影调：冷峻压抑的暗调，低饱和的灰土、锈褐、炭黑配冷蓝/暖橙逆光；大气尘霾与体积光；浅景深、电影级构图、克制的运镜。质感锚：真实电影胶片颗粒 + 实景光 + 高光轻微光晕 + 可触实体材质；照片级电影定格、透过真实镜头拍到的物理场景——不是 3D 渲染、不是 CG、不是塑料感、不是动画。\n\n[资产锚定]\n图片1 作为诺亚方舟内部大厅的视觉锚定。\n图片2 作为领航员K的视觉锚定。\n图片3 作为机器僧的视觉锚定。\n\n[本组 15s，4镜硬切，按下文执行]\n镜头4（4s，大全景，24mm广角，固定）：场景 图片1，前景是黑沉舱壁结构与仪表盘剪影框住画面边缘+中景是空旷寂寥的大厅地面+背景是巨大落地舷窗、冷蓝光从窗外死寂地球倾泻入舱。纵深三层把'空'做成压迫感。冷峻暗调、舷窗冷蓝光为唯一光源、深重阴影。\n镜头5（4s，中景，50mm，低机位仰拍）：前景是虚化的高台边缘金属结构+中景焦点是领航员K 图片2 静坐高台、侧对舷窗、被窗外冷光压成深色剪影（shallow depth of field 浅景深）+背景是舷窗冷光与尘霾。机位静止不跟不推、稳稳吸定。K几乎不动，只胸口随沉重呼吸微起伏、眼神望向窗外文明残骸。\n镜头6（4s，全景，35mm，固定）：前景是幽暗地面与冷光投影+中景焦点是机器僧 图片3 在大厅另一侧盘腿莲花打坐、铜铁拼接锈迹身躯、身披红色袈裟、关节露出精密齿轮+背景空旷舱壁。幽暗中红袈裟是画面唯一一点暖色、牢牢吸住视线，冷光勾金属边缘高光、半身没入剪影。机器僧静谧安详、纹丝不动。\n镜头7（3s，特写，100mm微距，固定+shallow depth of field）：前景与背景全部熔成幽暗虚化散景（bokeh）+焦点极浅、只锁住机器僧 图片3 搭在膝上的金属手指。手指在红袈裟边缘微微动着、关节齿轮无声咬合，像在静静计算什么——一个不动声色的伏笔。\n\n[声音设计]\n舱内低频嗡鸣底层贯穿全组；镜5叠 K 沉重而缓慢的呼吸；镜6 极轻微的齿轮转动声；镜7 齿轮咔哒、计算般规律的细微声响。整组禅意静默，不要背景音乐、不要人声。\n\n[关键约束]\n冷峻暗调、东方禅意极简、舷窗冷蓝光为唯一光源；胶片颗粒+实景光；非 3D 渲染、非 CG、非塑料感；机器僧金属面板无五官、只有两个空洞眼窝；无字幕、无水印。",
+        "duration": 15,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": true
+      },
+      "references": [
+        {
+          "label": "图片1",
+          "kind": "库资产",
+          "ref_token": "@[scene:noah_ark_hall|look:dim]",
+          "display_name": null,
+          "path": "assets/scenes/noah_ark_hall.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        },
+        {
+          "label": "图片2",
+          "kind": "库资产",
+          "ref_token": "@[char:navigator_k|look:default]",
+          "display_name": null,
+          "path": "assets/characters/navigator_k.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        },
+        {
+          "label": "图片3",
+          "kind": "库资产",
+          "ref_token": "@[char:monk_robot|look:default]",
+          "display_name": null,
+          "path": "assets/characters/monk_robot.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        }
+      ],
+      "镜头": [
+        {
+          "镜号": 4,
+          "时长_秒": 4
+        },
+        {
+          "镜号": 5,
+          "时长_秒": 4
+        },
+        {
+          "镜号": 6,
+          "时长_秒": 4
+        },
+        {
+          "镜号": 7,
+          "时长_秒": 3
+        }
+      ],
+      "_unresolved_tokens": []
+    },
+    {
+      "group": "第三组",
+      "组名": "创世独白",
+      "model_code": "doubao-seedance-2-0-260128",
+      "task_type": "video",
+      "params": {
+        "prompt": "[风格锁定]\n8K 超写实真人电影感 / photoreal live-action cinematic；《沙丘 Dune》《星际穿越 Interstellar》级质感 + 东方禅意压抑；废土美学 × 心理惊悚 × 赛博科幻。影调：冷峻压抑的暗调，低饱和灰土/锈褐/炭黑配冷蓝/暖橙逆光；大气尘霾与体积光；浅景深、电影级构图。质感锚：真实电影胶片颗粒 + 实景光 + 可触实体材质；照片级电影定格——不是 3D 渲染、不是 CG、不是塑料感、不是动画。\n\n[资产锚定]\n图片1 作为领航员K的视觉锚定。\n图片2 作为诺亚方舟内部大厅的视觉锚定。\n\n[本组 15s，3镜硬切，按下文执行]\n镜头8（5s，近景，85mm长焦+浅景深，极缓 push in）：前景是领航员K 图片1 沙哑侧脸的近景、皮肤毛孔与胡茬清晰+背景是场景 图片2 舷窗外冷光与文明残骸严重虚化成散景。镜头极缓推进、把注意力聚拢到他眼上。眼神像熄灭的火山、空洞疲惫，望向窗外。冷光侧打、面部半明半暗。\n台词——K（VO，沙哑低沉、缓慢沧桑、像自语）：\"God said, let there be light.\"（念白：起调极低、词间留白，\"light\"轻轻拖尾）。\n镜头9（5s，大远景，35mm，固定）：场景 图片2 舷窗外，前景是舷窗金属框结构的剪影+中景是窗外被覆灭的人类文明残骸+背景是戈壁荒漠延伸至地平线。冷蓝外景、尘霾、死寂；VO 压在这个死寂的环境画面上、与废墟互为注脚。\n台词——K（VO，沉缓陈述）：\"Then He took away human language, thinking that would stop the Tower of Babel.\"（念白：平直克制，\"Tower of Babel\"略加重）。\n镜头10（5s，中近景，85mm，极缓 push in）：前景是领航员K 图片1 剪影侧脸的轮廓线清晰+背景舷窗冷光虚化。镜头再次极缓推进、把独白收束顶到观众眼前。喉结微动、沉默里压着千钧。逆光剪影、面部仅余冷光勾边。\n台词——K（VO，低沉收束、一字一顿）：\"But He was wrong.\"（念白：\"wrong\"重音落下、戛然而止，留一拍死寂）。\n\n[声音设计]\n舱内低频嗡鸣底层；镜9 远处风鸣、死寂；VO 全程沙哑沧桑中年男声。独白后归静，不要背景音乐。\n\n[关键约束]\n台词为英文 VO、一字不改；冷峻暗调、逆光剪影、舷窗冷光；胶片质感、非 3D 非 CG 非塑料感；无字幕、无水印。",
+        "duration": 15,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": true
+      },
+      "references": [
+        {
+          "label": "图片1",
+          "kind": "库资产",
+          "ref_token": "@[char:navigator_k|look:default]",
+          "display_name": null,
+          "path": "assets/characters/navigator_k.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        },
+        {
+          "label": "图片2",
+          "kind": "库资产",
+          "ref_token": "@[scene:noah_ark_hall|look:dim]",
+          "display_name": null,
+          "path": "assets/scenes/noah_ark_hall.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        }
+      ],
+      "镜头": [
+        {
+          "镜号": 8,
+          "时长_秒": 5
+        },
+        {
+          "镜号": 9,
+          "时长_秒": 5
+        },
+        {
+          "镜号": 10,
+          "时长_秒": 5
+        }
+      ],
+      "_unresolved_tokens": []
+    },
+    {
+      "group": "第四组",
+      "组名": "巴别已倾",
+      "model_code": "doubao-seedance-2-0-260128",
+      "task_type": "video",
+      "params": {
+        "prompt": "[风格锁定]\n8K 超写实真人电影感 / photoreal live-action cinematic；《沙丘 Dune》《星际穿越 Interstellar》级质感 + 东方禅意压抑；废土美学 × 心理惊悚 × 赛博科幻。影调：冷峻压抑的暗调，低饱和配冷蓝/暖橙逆光；大气尘霾与体积光；浅景深、克制的运镜。质感锚：真实电影胶片颗粒 + 实景光；照片级电影定格——不是 3D 渲染、不是 CG、不是塑料感、不是动画。\n\n[资产锚定]\n图片1 作为领航员K的视觉锚定。\n图片2 作为机器僧的视觉锚定。\n图片3 作为诺亚方舟内部大厅的视觉锚定。\n\n[本组 13s，3镜硬切，按下文执行]\n镜头11（5.5s，大全景，28mm，沿舷窗缓慢横移）：场景 图片3，前景是舱内幽暗结构剪影+中景是巨大舷窗的金属框+背景是窗外被覆灭的文明、地球只剩戈壁与荒漠。镜头沿舷窗缓移、逐段揭示废土全景，用展开感托住独白铺陈。黄昏转冷、尘雾横陈、苍凉空旷。\n台词——K（VO，沧桑陈述）：\"After Babel fell, humans learned to speak the same language—\"（念白：平缓铺陈，破折号处不停顿、续到下一镜）。\n镜头12（5s，近景，85mm长焦+浅景深，固定）：前景是领航员K 图片1 凝望窗外的近景脸、神情清晰+背景是场景 图片3 舷窗冷光与残骸虚化。镜头静止稳稳吸定在他脸上。沉默压着千言、眼神疲惫而空。冷光侧打、面部明暗交界。\n台词——K（VO，承接上句、低沉收束）：\"—but they never managed to talk to each other.\"（念白：\"talk to each other\"放慢、字字清晰，落在苍凉）。\n镜头13（2.5s，中景拉远，35mm，缓 dolly-out）【站位图：K 左 / 机器僧 右的空间位置关系，参考 图片4】：镜头缓缓后退拉远，前景纳入舱内纵深+中景是领航员K 图片1 与机器僧 图片2 一同被收进场景 图片3 空旷大厅、成为相距遥远的两个孤点+背景舷窗外方舟驶向未知。冷峻暗调、舷窗冷光、归于空寂——一座缩小的巴别塔。\n\n[声音设计]\n引擎低鸣底层；VO 沧桑男声续完第二句独白；末镜引擎低鸣渐弱、归于寂静。不要背景音乐。\n\n[关键约束]\n台词为英文 VO、一字不改；冷峻暗调、舷窗冷光；胶片质感、非 3D 非 CG 非塑料感；无字幕、无水印。",
+        "duration": 13,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "generate_audio": true
+      },
+      "references": [
+        {
+          "label": "图片1",
+          "kind": "库资产",
+          "ref_token": "@[char:navigator_k|look:default]",
+          "display_name": null,
+          "path": "assets/characters/navigator_k.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        },
+        {
+          "label": "图片2",
+          "kind": "库资产",
+          "ref_token": "@[char:monk_robot|look:default]",
+          "display_name": null,
+          "path": "assets/characters/monk_robot.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        },
+        {
+          "label": "图片3",
+          "kind": "库资产",
+          "ref_token": "@[scene:noah_ark_hall|look:dim]",
+          "display_name": null,
+          "path": "assets/scenes/noah_ark_hall.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        },
+        {
+          "label": "图片4",
+          "kind": "站位图",
+          "镜号": 13,
+          "path": "assets/shots/第1集_开篇/1-013.png",
+          "asset_type": "Image",
+          "role": "reference_image"
+        }
+      ],
+      "镜头": [
+        {
+          "镜号": 11,
+          "时长_秒": 5.5
+        },
+        {
+          "镜号": 12,
+          "时长_秒": 5
+        },
+        {
+          "镜号": 13,
+          "时长_秒": 2.5
+        }
+      ],
+      "_unresolved_tokens": []
+    }
+  ]
+}

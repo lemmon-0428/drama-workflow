@@ -1,0 +1,12 @@
+[
+  {
+    "name": "phone_damon_call",
+    "category": "prop",
+    "char_id": "phone_damon_call",
+    "look": "default",
+    "display_name": "Damon 来电手机",
+    "design": "a black modern smartphone on a dark luxury side table, incoming call screen glowing in cold white text reading 'Damon', dim penthouse night background, sharp inciting interruption prop, photoreal cinematic close-up",
+    "quality": "high",
+    "prompt": "a black modern smartphone on a dark luxury side table, incoming call screen glowing in cold white text reading 'Damon', dim penthouse night background, sharp inciting interruption prop, photoreal cinematic close-up\n\nSTYLE: [STYLE LOCK]（全集统一·每段复用）\n写实真人电影感 / photoreal live-action cinematic；成人都市情感悬疑短剧，现代顶层公寓，黑金奢华空间、玻璃反射、壁炉火光、城市夜景、清晨冷白阳光。整体低调 noir 影调：夜戏低照度、高反差、暖金火光与深红道具点缀；日戏冷白曝光、清晰揭露秘密，不走温暖生活流。\n质感锚（反塑料感）：真实电影胶片颗粒 + 实景自然光/实际灯具 + 真实皮肤毛孔 + 真实丝绸/西装羊毛/皮革/玻璃/金属质感；照片级电影定格、真实镜头拍到的物理场景。不是 3D 渲染、不是 CG、不是塑料皮肤、不是动画、不是低俗色情图。\nOutput a 1:1 photorealistic prop board, centered product composition, clean studio background, real materials and textures. The smartphone screen should show the caller name Damon clearly; no other readable UI text. no watermark, no logo."
+  }
+]

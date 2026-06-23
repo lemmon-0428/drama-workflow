@@ -1,0 +1,181 @@
+{
+  "drama": "睡错对象：他竟是男友的爹",
+  "style": "clean white-paper pencil storyboard, photoreal noir assets as references only",
+  "updated_at": "2026-06-23 00:49:24",
+  "total": 9,
+  "success": 9,
+  "failed": 0,
+  "assets": [
+    {
+      "name": "色卡_ep1_ville_night_noir",
+      "category": "scene",
+      "char_id": "色卡_ep1_ville_night_noir",
+      "look": "default",
+      "path": "scenes/色卡_ep1_ville_night_noir.png",
+      "size": "1666x944",
+      "prompt": "A professional 13-color palette design sheet for film production, in the style of a cinematographer's color script reference card. Image aspect ratio strictly 16:9 horizontal landscape format.\n\nLayout: pure clean off-white background. Centered at top: large bold black sans-serif title \"CUO AI EP1 THE VILLE NIGHT NOIR - 13 COLOR PALETTE\" in clean industrial typography.\n\nBelow the title: 13 vertical color swatch bars in a single horizontal row, evenly spaced, each a tall vertical rectangle of flat solid color, crisp clean edges, no gradient or texture inside. All 13 same size and same baseline. Below each swatch, two lines: color name in clean bold sans-serif uppercase and HEX code in monospace.\n\nThe 13 colors in left-to-right order with exact HEX values and labels:\n1. CITY WINDOW BLACK / #111217 (night glass and city reflection black)\n2. BLACK MARBLE / #1B1A1C (penthouse black marble surfaces)\n3. CHARCOAL SUIT / #2A2B31 (Jasper and Ethan dark tailoring)\n4. MIDNIGHT NAVY / #1F3045 (cool city-night shadow)\n5. GLASS BLUE GREY / #53606D (window reflection and cool metal)\n6. AMBER FIRELIGHT / #D68A34 (fireplace direct light)\n7. OLD GOLD PRACTICAL / #B88745 (black-gold luxury practical lamp)\n8. DEEP WINE RED / #7B1020 (red blindfold, restraints, desire symbol)\n9. RED SATIN HIGHLIGHT / #B73A48 (red satin and feather highlight)\n10. IVORY SKIN SILK / #E6D9C8 (Oliver ivory silk and pale skin highlight)\n11. WARM MATURE SKIN / #B98668 (Ethan warm mature skin under firelight)\n12. SILVER HANDCUFF / #AEB3B8 (metal cuffs and phone edge)\n13. DEEP SHADOW BLACK / #09080A (darkest noir anchor)\n\nEach swatch must render the exact HEX with full fidelity: flat solid, no shading, no gradient, no texture. Labels perfectly readable.\n\nHard constraints: all 13 swatches exact HEX-accurate flat solid colors; strictly 16:9; white/off-white pure background; no illustrations, no photos, no sample scenes; clean sans-serif labels fully readable; single horizontal row with even spacing; no watermark; no logo; title is largest text; professional production-grade Adobe Color / Pantone x film color script look.",
+      "display_name": "第1集 The Ville 夜戏黑金红色卡",
+      "design": "night noir black-gold penthouse palette with deep red prop accent and amber fireplace",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    },
+    {
+      "name": "色卡_ep1_ville_morning_cold",
+      "category": "scene",
+      "char_id": "色卡_ep1_ville_morning_cold",
+      "look": "default",
+      "path": "scenes/色卡_ep1_ville_morning_cold.png",
+      "size": "1665x944",
+      "prompt": "A professional 13-color palette design sheet for film production, in the style of a cinematographer's color script reference card. Image aspect ratio strictly 16:9 horizontal landscape format.\n\nLayout: pure clean off-white background. Centered at top: large bold black sans-serif title \"CUO AI EP1 THE VILLE MORNING REVEAL - 13 COLOR PALETTE\" in clean industrial typography.\n\nBelow the title: 13 vertical color swatch bars in a single horizontal row, evenly spaced, each a tall vertical rectangle of flat solid color, crisp clean edges, no gradient or texture inside. All 13 same size and same baseline. Below each swatch, two lines: color name in clean bold sans-serif uppercase and HEX code in monospace.\n\nThe 13 colors in left-to-right order with exact HEX values and labels:\n1. COLD WHITE SUN / #F3F6F4 (morning sunlight exposing secrets)\n2. PALE CITY SKY / #D7E0E6 (city light through floor-to-ceiling windows)\n3. GLASS REFLECTION / #B9C3CA (window and photo-frame glass)\n4. COOL MARBLE GREY / #8E969D (cold black-white interior reflection)\n5. BLACK MARBLE SOFT / #242529 (morning black marble surface)\n6. SILVER PHOTO FRAME / #B2B7BC (father-son photo frame metal)\n7. PHOTO PAPER CREAM / #D7C9B7 (old formal photo paper warmth)\n8. IVORY SKIN SILK / #E8DACB (Oliver pale skin and ivory fabric)\n9. ETHAN SHADOW TAN / #A77A5D (Ethan mature warm skin in cold light)\n10. CHARCOAL FABRIC / #32343A (dark suit or morning shadow cloth)\n11. MUTED WINE RED / #7A1826 (red prop aftermath, desaturated)\n12. COLD BLUE SHADOW / #526071 (daylight shadow side)\n13. REVEAL BLACK / #0C0D10 (hard truth deep black)\n\nEach swatch must render the exact HEX with full fidelity: flat solid, no shading, no gradient, no texture. Labels perfectly readable.\n\nHard constraints: all 13 swatches exact HEX-accurate flat solid colors; strictly 16:9; white/off-white pure background; no illustrations, no photos, no sample scenes; clean sans-serif labels fully readable; single horizontal row with even spacing; no watermark; no logo; title is largest text; professional production-grade Adobe Color / Pantone x film color script look.",
+      "display_name": "第1集 The Ville 清晨冷白色卡",
+      "design": "cold morning reveal palette with pale sun, glass, black marble, silver frame, ivory skin",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    },
+    {
+      "name": "staging_SEG-1F_门口撞破",
+      "category": "scene",
+      "char_id": "staging_SEG-1F_门口撞破",
+      "look": "default",
+      "path": "scenes/staging_SEG-1F_门口撞破.png",
+      "size": "1665x944",
+      "prompt": "A hand-drawn top-down bird's eye view blocking diagram on aged off-white production paper, in the style of a professional film staging diagram. Image aspect ratio strictly 16:9 horizontal landscape.\n\nLayout: top-down schematic floor plan of a luxury penthouse bedroom doorway and short hallway in confident graphite pencil with selective red colored pencil annotations. Hand-lettered labels in readable slightly uneven serif block letters.\n\nTitle at top center: \"CUO AI EP1 - SEG-1F - STAGING DIAGRAM\". Subtitle: \"BEDROOM DOORWAY MORNING REVEAL / 3 ADULT MEN + DOOR FRAME / JASPER OPENS, ETHAN ADVANCES, OLIVER TRAPPED\".\n\nEnvironmental anchors: a concealed bedroom door at frame-right, polished metal handle, short hallway leading from living room at frame-left, sofa edge and black marble threshold suggested at far left, pale bedding glimpsed inside bedroom as a labelled outline, floor-to-ceiling window light direction arrow from top.\n\nCharacter positions as top-down figure-outline silhouettes with labels: OLIVER near the bedroom threshold, turned toward the door, clutching clothes close to his chest, shoulders closed; ETHAN behind him from the living-room side, calm adult male silhouette, one arm angled as if just released or about to gesture, not touching intimately; JASPER outside/at the door line, pushing the door inward, body frozen in shock. Show adult body scale differences: Ethan broad and mature, Jasper tall slim, Oliver lean smaller. No explicit nudity; all silhouettes are schematic.\n\nCamera positions + path: red camera triangles S1/S2/S3/S4 all on the hallway/living-room side of the action axis. S1 low tracking from living room toward door, 35mm. S2 over Oliver's shoulder toward the handle, 50mm. S3 doorway reveal wide two-plane shot, 35mm. S4 hard-cut reaction angle on Jasper and Ethan, 85mm. Red curved arrow marks Oliver flee path to the door. Red dashed sight-lines: Oliver to door handle, Jasper to Ethan, Ethan to Jasper, Jasper to Oliver. Red 180-degree axis line runs along the doorway threshold from living room to bedroom; label \"CAMERAS STAY HALL SIDE / 180 AXIS\".\n\nFinal frame note: red dashed rectangle at the doorway labelled \"FINAL FRAME: JASPER IN DOOR / OLIVER FOREGROUND / ETHAN BACKGROUND, OFF-AXIS\". Lower-left legend: \"red triangles=cameras / dashed red=sight-lines / red curve=flee path / red line=180 axis\".\n\nHard constraints: top-down bird's eye view only; aged off-white paper, graphite pencil base, black ink labels, red pencil only for cameras, paths, sight-lines, axis and final-frame rectangle; strictly 16:9; no digital painting, no 3D, no photoreal elements, no colored scene art except red pencil; readable labels; non-explicit schematic adult blocking.",
+      "display_name": "SEG-1F 门口撞破俯视调度图",
+      "design": "top-down staging diagram for three-person doorway reveal in cold morning penthouse hallway",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    },
+    {
+      "name": "SEG-1A_草图板_红色仪式被打断",
+      "category": "scene",
+      "char_id": "SEG-1A_草图板_红色仪式被打断",
+      "look": "default",
+      "path": "scenes/SEG-1A_草图板_红色仪式被打断.png",
+      "size": "1666x944",
+      "prompt": "A hand-drawn pencil sketch storyboard on CLEAN BRIGHT NEUTRAL-WHITE storyboard paper. Pure white drawing paper, no aging, no yellowing, no kraft or sepia tone, no paper texture, no smudges. Professional film production storyboard style. Total image aspect ratio strictly 16:9.\n\nReference image instructions: use the red prop reference only for the recognizable shapes of the red blindfold, polished cuffs, and feather wand; use the phone reference only for the incoming-call screen text \"Damon\". Render all references as graphite pencil line art; do not bring in photoreal color. Storyboard remains graphite, black ink borders and red pencil annotations only.\n\nLayout: 3 columns x 2 rows grid. Cells: PANEL 1, PANEL 2, PANEL 3, PANEL 4, SHOOTING PLAN, NOTES. Each storyboard panel has a strict 16:9 inner frame with thick black ink border and caption strip. Hand-lettered serif captions, readable but slightly uneven.\n\nDrawing technique: loose graphite pencil, confident architectural penthouse perspective, clear noir compositions, cross-hatched shadow and untouched white-paper highlights. Red colored pencil only for motion arrows, camera triangles, callouts, HARD CUT marks, and the 180-degree axis.\n\nLighting: night in The Ville penthouse living room, black-gold practical light, amber fireplace rim, city lights behind floor-to-ceiling glass, deep red props as symbolic accents drawn only with red pencil marks. Keep the paper pure white.\n\nDirectional axis rule: Oliver seated near the center-left chair, Jasper moves from frame-right toward the side table and then exits toward the hallway; cameras stay on the window/fireplace side of the action axis.\n\nTitle top center: \"CUO AI EP1 - SEG-1A - 红色仪式被打断\". Subtitle: \"4 SHOTS / 3 HARD CUTS / The Ville living room night / ritual tension broken by Damon call\".\n\nPANEL 1 - SHOT 1: medium-wide off-axis living-room composition. Oliver, adult white blond man with wavy hair and lean build, sits restrained on a modern chair in low shadow; red blindfold and cuffs are readable but non-explicit, no nudity detail, no sexual act. Jasper, adult white man early 30s, wavy brown hair, charcoal tailored suit, controlled posture, holds a red feather wand near Oliver's upper chest area as a symbolic prop. Phone sits on side table in the background. Caption: \"SHOT1 - MS/WIDE 35mm static + micro-shake / Jasper toys with red feather wand; Oliver breathes in shadow / JASPER: '等不及了吧？'\". Red pencil: shallow arc from feather wand, camera triangle, note \"NON-EXPLICIT NOIR\". HARD CUT.\n\nPANEL 2 - SHOT 2: extreme close-up of black smartphone on dark side table, screen glowing, hand-lettered \"Damon\" readable. The room is blurred behind; red phone-ring burst lines. Caption: \"SHOT2 - ECU 85mm / phone lights up, Damon incoming call interrupts / SFX: harsh phone ring\". Red pencil: ring vibration marks and callout \"DAMON\". HARD CUT.\n\nPANEL 3 - SHOT 3: over-shoulder medium close shot. Jasper holds the phone at his ear, brow tightened, one hand hovering near Oliver's cheek without graphic contact; Oliver stays blurred in foreground with red blindfold silhouette. Caption: \"SHOT3 - OTS MCU 50mm handheld still / Jasper answers while the mood collapses / JASPER: 'Damon，你最好有要紧事跟我说'\". Red pencil: sight-line from Jasper to phone, small tension marks. HARD CUT.\n\nPANEL 4 - SHOT 4: hallway-facing wide shot. Jasper rises and exits toward the hall, phone to ear; Oliver remains alone in the chair in the middle distance, red props as small accents, fireplace and city windows behind. Caption: \"SHOT4 - WIDE 35mm slow pan right / Jasper leaves; Oliver is left waiting in the dark / footsteps recede\". Red pencil: exit arrow for Jasper, 180-axis reminder.\n\nSHOOTING PLAN: top-down bird's eye of The Ville living room: floor-to-ceiling windows, fireplace, low sofa, chair, side table with phone, hallway exit. Red camera triangles S1/S2/S3/S4 on the same side, Jasper path to phone and hall, Oliver seated marker, red 180-degree axis line. Caption: \"SHOOTING PLAN - 4 shots, hard cuts, cameras stay window/fireplace side, axis preserved\".\n\nNOTES cell: hand-lettered constraints: \"adult suspense, no explicit sex, no nudity detail, red props symbolic only, phone text Damon readable, Oliver blond, Jasper brown hair + tailored suit\".\n\nHard constraints: clean pure white paper, graphite greyscale drawing, black ink frames and captions, red pencil only for annotations and red prop emphasis; no photoreal elements, no digital painting, no 3D, no colored overlays; no explicit sexual act, no genitals, no nipples, no pornographic pose; all characters are adults; each panel off-axis, not centered; readable English/Chinese captions.",
+      "display_name": "SEG-1A 红色仪式被打断草图板",
+      "design": "clean white-paper pencil storyboard, red ritual interrupted by Damon phone call",
+      "status": "success",
+      "mode": "edit",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    },
+    {
+      "name": "SEG-1B_草图板_空置等待与睡去",
+      "category": "scene",
+      "char_id": "SEG-1B_草图板_空置等待与睡去",
+      "look": "default",
+      "path": "scenes/SEG-1B_草图板_空置等待与睡去.png",
+      "size": "1666x944",
+      "prompt": "A hand-drawn pencil sketch storyboard on CLEAN BRIGHT NEUTRAL-WHITE storyboard paper. Pure white drawing paper, no aging, no yellowing, no kraft or sepia tone, no texture. Professional film production storyboard style. Total image aspect ratio strictly 16:9.\n\nReference instruction: use the red prop reference only for the simple recognizable shapes of blindfold, cuffs and red prop set; redraw them as graphite pencil line art with selective red pencil callouts. Do not import color or photoreal texture.\n\nLayout: 2 columns x 2 rows grid: PANEL 1, PANEL 2, PANEL 3, SHOOTING PLAN. Each panel strictly 16:9 with thick black ink frame border and hand-lettered caption strip.\n\nDrawing technique: graphite pencil and greyscale cross-hatch only, black ink borders, red pencil only for arrows, clock time jump marks and 180-axis. Lighting: night penthouse low-key noir, amber fireplace glow rendered in greyscale highlights, deep city window shadows. Paper stays pure white.\n\nDirectional axis rule: Oliver remains seated near the same chair, camera stays on living-room window side; the room becomes more empty as Jasper's footsteps fade.\n\nTitle: \"CUO AI EP1 - SEG-1B - 空置等待与睡去\". Subtitle: \"3 SHOTS / 1 TIME-JUMP CUT / living room night / abandoned waiting turns into sleep\".\n\nPANEL 1 - SHOT 1: close shot, 50mm, slightly low angle. Oliver, adult white blond man, blindfolded in shadow, shifts his shoulders and hands against cuffs; posture reads discomfort and annoyance, not erotic display. Chair edge and fireplace blur behind. Caption: \"SHOT1 - CU 50mm static / Oliver shifts, waiting alone / OLIVER OS: '贾斯帕搞什么！竟然就这么把我晾在这了？'\". Red pencil: small movement arrows at wrists and shoulders, no explicit body detail.\n\nPANEL 2 - SHOT 2: insert close-up of a wall clock. Hands jump from 22:00 to 23:00 using three ghosted clock hands and red arrow marks. Background penthouse wall in cross-hatch shadow. Caption: \"SHOT2 - INSERT 85mm / wall clock jumps 22:00 -> 23:00 / SFX: clock ticks swell then drop\". Red pencil: time-jump arrow and \"22 -> 23\".\n\nPANEL 3 - SHOT 3: medium-wide, static. Oliver finally sleeps, head tipped to one side, body relaxed from exhaustion; room is silent, side table and fireplace dim, city lights distant. Bottom edge fades into a black rectangle labelled \"BLACK\" for transition. Caption: \"SHOT3 - WIDE 35mm locked-off / Oliver dozes off in the empty room / BLACK TRANSITION\". Red pencil: final-frame bracket around sleeping silhouette and black-screen arrow.\n\nSHOOTING PLAN: top-down living room with chair, side table, fireplace, windows, hallway. Oliver marker stays fixed; three camera triangles S1/S2/S3 on same side; red 180-axis line; time-jump icon between S1 and S2. Caption: \"SHOOTING PLAN - 3 shots, one time-jump insert, no axis jump, final black transition\".\n\nHard constraints: clean pure white paper; graphite pencil line, greyscale cross-hatch, black ink captions, red pencil annotations only; no digital painting, no 3D, no photographic elements; adult suspense only, non-explicit, no nudity detail, no sex act; all panels off-axis; readable captions.",
+      "display_name": "SEG-1B 空置等待与睡去草图板",
+      "design": "clean white-paper pencil storyboard, abandoned waiting, clock time jump, sleep",
+      "status": "success",
+      "mode": "edit",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    },
+    {
+      "name": "SEG-1C_草图板_伊森入场",
+      "category": "scene",
+      "char_id": "SEG-1C_草图板_伊森入场",
+      "look": "default",
+      "path": "scenes/SEG-1C_草图板_伊森入场.png",
+      "size": "1666x944",
+      "prompt": "A hand-drawn pencil sketch storyboard on CLEAN BRIGHT NEUTRAL-WHITE storyboard paper. Pure white drawing paper, no aging/yellowing/kraft/sepia/texture/smudge. Professional film production storyboard style. Total image aspect ratio strictly 16:9.\n\nReference instruction: use the red prop reference only for cuffs and blindfold silhouette. Draw them as pencil line art with red pencil annotation only; no photoreal import.\n\nLayout: 3 columns x 2 rows grid. Cells: PANEL 1, PANEL 2, PANEL 3, PANEL 4, SHOOTING PLAN, NOTES. Each panel strictly 16:9 with thick black ink frame border and caption strip.\n\nDrawing technique: graphite pencil, confident noir shadows, black ink borders, red pencil only for movement arrows, camera triangles, reveal beats and 180-axis. Lighting: night penthouse, low-key black-gold, fireplace side rim, city window reflections. Keep paper white.\n\nDirectional axis rule: action axis from Oliver's chair toward Ethan's entrance; cameras stay on the fireplace/window side. The scene is suspenseful and non-explicit: no sexual act, no nudity detail, no injury detail.\n\nTitle: \"CUO AI EP1 - SEG-1C - 伊森入场：送上门的礼物\". Subtitle: \"4 SHOTS / 3 HARD CUTS / living room night / Ethan discovers Oliver and misreads the scene\".\n\nPANEL 1 - SHOT 1: extreme close-up, 85mm. A mature male hand enters frame and gently touches Oliver's cheek; Oliver's red blindfold edge and pale blond hair visible, face partly in shadow. No explicit body detail. Caption: \"SHOT1 - ECU 85mm / a hand touches Oliver's cheek; he stirs in confusion / SFX: cloth rustle, low room tone\". Red pencil: hand-entry arrow from frame-right. HARD CUT.\n\nPANEL 2 - SHOT 2: reverse medium close, low angle. Ethan, adult white man mid-50s, broad mature build, thick swept-back dark hair with faint grey at temples, charcoal suit and open white collar, slight post-drink flush, bends into the amber firelight with a calm predatory half-smile. Caption: \"SHOT2 - MCU low angle 50mm / Ethan leans in, composed and dangerous / ETHAN OS: '送上门的礼物？'\". Red pencil: reveal burst around Ethan face, camera triangle. HARD CUT.\n\nPANEL 3 - SHOT 3: close shot, 50mm, shallow depth. Oliver jerks back, wrists rattle off-frame; Ethan's hand is near Oliver's jawline/collar only, no choking detail, no injury. The beat reads panic and loss of control. Caption: \"SHOT3 - CU 50mm handheld micro-shake / Oliver jolts, cuffs rattle / OLIVER: '唔唔！' / OLIVER OS: '搞什么？！'\". Red pencil: cuff-rattle marks and alarm beat. HARD CUT.\n\nPANEL 4 - SHOT 4: wide silhouette, 35mm. Ethan lifts or guides Oliver away from the chair toward the sofa as a controlled noir silhouette; bodies are fully obscured by chair back, suit jacket and shadow, no explicit contact detail. Sofa and fireplace become destination anchors. Caption: \"SHOT4 - WIDE 35mm / Ethan guides Oliver from chair toward sofa, silhouettes only / ETHAN: '不过确实对我的胃口'\". Red pencil: path arrow chair -> sofa, note \"IMPLIED ONLY\".\n\nSHOOTING PLAN: top-down living room with entrance, chair, sofa, fireplace, side table, windows. Ethan entrance path, Oliver chair marker, sofa destination, camera triangles S1-S4 on one side, red 180-axis line and sight-lines. Caption: \"SHOOTING PLAN - 4 shots, hard cuts, chair-to-sofa blocking, axis preserved\".\n\nNOTES cell: \"Oliver: adult white blond, vulnerable; Ethan: mature white patriarch, dark swept-back hair, charcoal suit; suspense not explicit; no sex act, no nudity detail, no harm detail\".\n\nHard constraints: clean pure white storyboard paper, graphite greyscale, black captions, red pencil annotations only; no digital painting, no 3D, no photoreal elements; adult non-explicit suspense, no pornographic pose, no genitals, no nipples, no sexual act, no graphic violence; off-axis compositions; readable captions.",
+      "display_name": "SEG-1C 伊森入场草图板",
+      "design": "clean white-paper pencil storyboard, Ethan discovers Oliver, predatory reveal, non-explicit suspense",
+      "status": "success",
+      "mode": "edit",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    },
+    {
+      "name": "SEG-1D_草图板_壁炉黑场",
+      "category": "scene",
+      "char_id": "SEG-1D_草图板_壁炉黑场",
+      "look": "default",
+      "path": "scenes/SEG-1D_草图板_壁炉黑场.png",
+      "size": "1666x944",
+      "prompt": "A hand-drawn pencil sketch storyboard on CLEAN BRIGHT NEUTRAL-WHITE storyboard paper. Pure white drawing paper, no aging, no yellowing, no kraft or sepia, no texture. Professional film production storyboard style. Total image aspect ratio strictly 16:9.\n\nLayout: 2 columns x 2 rows grid: PANEL 1, PANEL 2, PANEL 3, SHOOTING PLAN. Each panel strictly 16:9 with thick black ink frame border and caption strip.\n\nDrawing technique: graphite pencil and greyscale cross-hatch only, black ink borders, red pencil only for camera arrows, hard cut marks, fire emphasis ticks and 180-axis. Lighting: The Ville living room night, amber fireplace represented as bright untouched white flame shapes surrounded by dense cross-hatch; paper remains white.\n\nThis segment is symbolic and non-explicit. It must never show a sexual act or nudity detail. Use obstructed silhouettes, foreground props, fireplace cutaway and black screen to imply time passing.\n\nTitle: \"CUO AI EP1 - SEG-1D - 壁炉黑场：失控的省略\". Subtitle: \"3 SHOTS / 2 HARD CUTS / night living room / symbolic ellipsis, no explicit action\".\n\nPANEL 1 - SHOT 1: low sofa-edge close, 85mm, shallow depth. Foreground is the edge of a sofa and a fallen red blindfold/cuff chain drawn as small symbolic shapes; in the deep background, two adult silhouettes are almost fully hidden by shadow and furniture, no body detail, no sexual act. Caption: \"SHOT1 - LOW CU 85mm / sofa edge and fallen red props in foreground; figures lost in shadow / breath and cloth rustle only\". Red pencil: foreground prop callout and HARD CUT mark.\n\nPANEL 2 - SHOT 2: close-up of Ethan's upper torso and hands at shirt collar only, 50mm. He loosens a collar button in firelight; Oliver is not visible except a blurred pale shoulder-shaped silhouette at the extreme frame edge without detail. Caption: \"SHOT2 - MCU 50mm / Ethan loosens collar in firelight; tension stays off-screen / SFX: button, breath\". Red pencil: small downward button arrow, note \"OFF-SCREEN\". HARD CUT.\n\nPANEL 3 - SHOT 3: fireplace cutaway, 50mm. The sculptural fireplace fills frame; flames burn high, then bottom half of panel fades to a black rectangle labelled \"BLACK\". No people visible. Caption: \"SHOT3 - FIREPLACE INSERT 50mm / flames burn, then picture falls to black / SFX: 噼啪烧柴声 + distant breath\". Red pencil: flame ticks and black-screen arrow.\n\nSHOOTING PLAN: top-down living room reduced to sofa, fireplace and camera positions. Red camera triangles S1 at sofa low angle, S2 side close angle, S3 facing fireplace. Red dashed line shows action staying off-screen behind furniture. Caption: \"SHOOTING PLAN - symbolic cutaway structure, two hard cuts, no explicit visual content\".\n\nHard constraints: clean pure white paper; graphite greyscale; black ink captions and borders; red pencil annotations only; no digital painting, no 3D, no photoreal elements; no explicit sex, no nudity detail, no genitals, no nipples, no pornographic pose; figures must be silhouettes or absent; the fireplace/black screen carries the ellipsis.",
+      "display_name": "SEG-1D 壁炉黑场草图板",
+      "design": "clean white-paper pencil storyboard, symbolic fireplace and black-screen ellipsis",
+      "status": "success",
+      "mode": "generate",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    },
+    {
+      "name": "SEG-1E_草图板_清晨身份证物",
+      "category": "scene",
+      "char_id": "SEG-1E_草图板_清晨身份证物",
+      "look": "default",
+      "path": "scenes/SEG-1E_草图板_清晨身份证物.png",
+      "size": "1665x944",
+      "prompt": "Use case: precise-object-edit. Asset type: SD2 reference storyboard sheet. Input images: Image 1 is the existing SEG-1E storyboard to edit; Image 2 is the exact red restraint prop reference; Image 3 is the updated father-son photo frame prop reference.\n\nPrimary request: edit the existing storyboard sheet while preserving its clean pure-white hand-drawn pencil storyboard style, 3 columns x 2 rows layout, title, caption strips, PANEL 1, PANEL 2, PANEL 3, SHOOTING PLAN, and NOTES as much as possible. The correction is focused on the second row first cell: PANEL 4 / SHOT 4.\n\nRequired edit for PANEL 4 / SHOT 4: remove every incorrect object that is not in Image 2, including high-heeled shoes, candles, cups/glasses, lace/flower/garter-like objects, extra decorative items, and any unrelated prop. Replace that cell with a black marble floor insert showing only the red prop set from Image 2 rendered as storyboard line art: satin red eye mask with ribbon tails, metal handcuffs, red strapped ball-shaped mouthpiece, and red feather wand. Keep a simple grey clothing/cloth pile and Oliver's trembling hand gathering clothes. No shoes of any kind. No candles. No cups. No lace lingerie. No flower shapes. No extra props.\n\nPanel 4 caption should communicate: SHOT4 - INSERT 50mm / red eye mask, metal handcuffs, red ball strap and feather wand from prop reference; Oliver gathers clothes / OLIVER: '老天，我到底做了什么'. Red pencil callouts may label RED PROP SET ONLY.\n\nPreserve PANEL 3 identity clue: the father-son photo frame should still match Image 3, showing current Ethan as mature white father and Jasper as adult white son, with the ETHAN + JASPER callout.\n\nStyle/medium: graphite pencil line art and greyscale cross-hatching on clean pure white storyboard paper; black ink frames and captions; red pencil annotations only. Keep the sheet non-photoreal as a production storyboard, not a rendered scene.\n\nConstraints: adult non-explicit aftermath only; no sex act, no nudity detail, no genitals, no nipples, no pornographic pose, no watermark. Do not introduce any new prop category beyond the red eye mask, handcuffs, red strapped ball-shaped mouthpiece, red feather wand, plain clothing/cloth, and Oliver's hand. Keep readable captions and the 16:9 overall canvas.",
+      "display_name": "SEG-1E 清晨身份证物草图板",
+      "design": "edit retry: Panel 4 red aftermath props corrected to match red_restraint_set only",
+      "status": "success",
+      "mode": "edit",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    },
+    {
+      "name": "SEG-1F_草图板_门口撞破",
+      "category": "scene",
+      "char_id": "SEG-1F_草图板_门口撞破",
+      "look": "default",
+      "path": "scenes/SEG-1F_草图板_门口撞破.png",
+      "size": "1666x944",
+      "prompt": "A hand-drawn pencil sketch storyboard on CLEAN BRIGHT NEUTRAL-WHITE storyboard paper. Pure white drawing paper, no aging, no yellowing, no kraft/sepia/texture/smudge. Professional film production storyboard style. Total image aspect ratio strictly 16:9.\n\nReference instruction: use the supplied staging diagram as the blocking source. Keep the same top-down doorway geography, camera side, flee path and 180-degree axis. Translate it into cinematic storyboard panels. Do not import aged paper tint; final storyboard paper must be clean pure white.\n\nLayout: 3 columns x 2 rows grid. Cells: PANEL 1, PANEL 2, PANEL 3, PANEL 4, SHOOTING PLAN, NOTES. Each panel strictly 16:9 with thick black ink frame border and hand-lettered caption strip.\n\nDrawing technique: graphite pencil, black ink borders/captions, red pencil only for movement arrows, camera triangles, HARD CUT marks, sight-lines and 180-axis. Lighting: cold morning doorway light, hard white sun from hallway/window, glass and marble reflections in greyscale. Paper stays pure white.\n\nDirectional axis rule: 180-degree axis runs along the bedroom doorway threshold from living room to bedroom. Cameras stay hall/living-room side, matching staging diagram. Adult non-explicit blocking only: no nudity detail, no sexual action.\n\nTitle: \"CUO AI EP1 - SEG-1F - 门口撞破\". Subtitle: \"4 SHOTS / 3 HARD CUTS / bedroom doorway morning / Oliver flees, Ethan follows, Jasper opens the door\".\n\nPANEL 1 - SHOT 1: medium shot, 50mm. Oliver gathers clothes in panic near sofa/threshold; Ethan, mature white patriarch with dark swept-back hair, opens his eyes behind him and calmly gestures or reaches near Oliver's wrist without intimate detail. Caption: \"SHOT1 - MS 50mm static / Oliver gathers clothes; Ethan wakes and stops him with calm control / ETHAN: '准备去哪？我的小礼物'\". Red pencil: Oliver flee arrow, Ethan gesture arrow. HARD CUT.\n\nPANEL 2 - SHOT 2: tracking wide, 35mm. Oliver, adult white blond, clutches clothes/sock and rushes toward Jasper's bedroom door; Ethan follows at a measured distance, adjusting a loosely worn white shirt or dark robe silhouette, lower body not emphasized. Caption: \"SHOT2 - WIDE 35mm track / Oliver flees toward the bedroom door; Ethan follows calmly / OLIVER: '我，我.....'\". Red pencil: flee path arrow toward door. HARD CUT.\n\nPANEL 3 - SHOT 3: doorway reveal wide, 35mm, fake one-shot feeling. The door pulls open; Jasper, adult white man early 30s with wavy brown hair and tailored suit, appears in the doorway shocked. Oliver is foreground side, half-turned and exposed by cold light while still covered by clothes; Ethan stands behind in the living-room plane. Strong doorframe composition, off-axis. Caption: \"SHOT3 - DOORWAY WIDE 35mm / door opens, Jasper enters and sees Ethan behind Oliver / SFX: door handle click, silence\". Red pencil: door swing arrow and shock sight-lines Jasper -> Ethan/Oliver. HARD CUT.\n\nPANEL 4 - SHOT 4: reaction two-plane close, 85mm. Jasper's face frozen in shock in foreground; Ethan in background turns with genuine surprise, controlled mask slipping for one beat. Oliver edge of frame only. Caption: \"SHOT4 - REACTION 85mm shallow DOF / Jasper stunned; Ethan unexpectedly shocked / final frame freezes on triangle\". Red pencil: triangular sight-line connecting Jasper, Ethan, Oliver.\n\nSHOOTING PLAN: redraw the staging reference on clean white paper: bedroom doorway, hall, sofa edge, three adult figure labels OLIVER / ETHAN / JASPER, camera triangles S1-S4 on hall side, flee path, door swing, red 180-degree axis line, final-frame rectangle. Caption: \"SHOOTING PLAN - copied from staging, 4 shots, hard cuts, hall-side cameras, axis preserved\".\n\nNOTES cell: \"Oliver adult white blond lean; Ethan mature broad dark hair with grey temples; Jasper white brown-haired elite in suit; doorframe is reveal device; no explicit content\".\n\nHard constraints: clean pure white storyboard paper, graphite greyscale, black ink frames and captions, red pencil annotations only; no digital painting, no 3D, no photoreal elements; no sex act, no nudity detail, no genitals, no nipples, no pornographic pose; all characters are adults; preserve staging diagram geography and axis; readable captions.",
+      "display_name": "SEG-1F 门口撞破草图板",
+      "design": "clean white-paper pencil storyboard, doorway reveal with Jasper entering and Ethan behind Oliver",
+      "status": "success",
+      "mode": "edit",
+      "provider": "micu",
+      "size_requested": "1920x1088",
+      "first_episode": "第1集_第1",
+      "used_by": [
+        "第1集_第1"
+      ]
+    }
+  ]
+}

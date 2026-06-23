@@ -1,0 +1,500 @@
+{
+  "drama": "步步生金",
+  "style": "写实真人青春逆袭剧 + 轻奇幻系统HUD（明亮温暖·当代城乡中国）",
+  "style_lock": "[STYLE LOCK]（全集统一·每段复用）\n写实真人电影感 / photoreal live-action cinematic；当代中国城乡青春逆袭剧 + 轻奇幻\"进步系统\"流。明亮温暖、积极向上的影调，自然光为主：乡村的暖金夕照与晨光、城市清透日光；低对比、柔和真实肤色、干净通透。\n奇幻元素：半透明科技感\"进步系统\"HUD——金/青发光的数字面板（步数·余额）、悬浮 UI 警报、系统机械音的视觉化，叠加在写实画面上，克制、不喧宾夺主。\n质感锚（反塑料感）：真实电影胶片颗粒 + 实景自然光 + 真实皮肤毛孔/布料/竹篾质感；照片级电影定格、透过真实镜头拍到的物理场景——不是 3D 渲染、不是 CG、不是塑料感、不是动画。",
+  "logline": "高考落榜的农村女孩苏小七绑定\"走路赚钱\"的进步系统，靠每一步攒下的钱与系统奖励的技能一路逆袭——从给家人添衣置物到竹编技艺惊动非遗、全网爆红，改写一家人的命运。",
+  "episodes": [
+    "第1集_绝望降临",
+    "第2集_城市谋生",
+    "第3集_全网爆红",
+    "第4集_衣锦还乡"
+  ],
+  "factions": [
+    {
+      "id": "su_family",
+      "display_name": "苏家一家与同村乡邻",
+      "aesthetic_family": "当代中国农村写实·暖金自然光·朴素磨损布料·真实风化皮肤",
+      "members": ["su_xiaoqi", "su_father", "su_mother", "li_shu"],
+      "differentiators": {
+        "gender": "苏小七=少女；苏父/李叔=中老年男；苏母=中年女",
+        "age": "苏小七~17；苏母~45；苏父~48；李叔~50",
+        "physique": "苏小七=瘦小纤弱；苏父=精瘦佝偻跛脚；苏母=壮实敦厚；李叔=粗壮敦实",
+        "hair_beard": "苏小七=直发齐肩+黑框眼镜；苏父=花白稀疏短发、灰胡茬；苏母=黑发挽低髻；李叔=花白寸头、络腮胡茬",
+        "costume": "苏小七=褪色针织+泥小白鞋；苏父=补丁工装挽裤布鞋；苏母=碎花罩衫+布围裙；李叔=糙布衫挽袖",
+        "signature_gear": "苏小七=黑框眼镜+泥小白鞋；苏父=扁担+竹篓；苏母=布围裙+抹布；李叔=肩头锄头",
+        "weapons": "全员 none（生活剧）",
+        "trophies": "无",
+        "aura": "苏小七=倔强清澈；苏父=隐忍老实；苏母=朴实慈和；李叔=粗声爽利市井"
+      }
+    },
+    {
+      "id": "liang_household",
+      "display_name": "梁家豪门",
+      "aesthetic_family": "当代中国都市富裕·清透日光·精致衣料·保养肤质",
+      "members": ["madam_liang", "liang_jiajia"],
+      "differentiators": {
+        "gender": "均女",
+        "age": "梁女士~40+；梁佳佳~15-16",
+        "physique": "梁女士=纤细优雅；梁佳佳=纤瘦少女",
+        "hair_beard": "梁女士=精致及肩造型发；梁佳佳=时髦挑染发",
+        "costume": "梁女士=高档丝质/精纺家居+金饰；梁佳佳=oversized潮牌卫衣+破洞牛仔",
+        "signature_gear": "梁女士=低调金饰；梁佳佳=潮流配饰",
+        "weapons": "none",
+        "trophies": "无",
+        "aura": "梁女士=优雅克制富态；梁佳佳=叛逆乖戾"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "char.su_xiaoqi.default", "category": "character", "kind": "human",
+      "id": "su_xiaoqi", "display_name": "苏小七", "look": "default",
+      "ref_token": "@[char:su_xiaoqi|look:default]", "status": "planned", "faction": "su_family",
+      "intent": {
+        "sheet_spec": {
+          "identity_anchor": "17-year-old rural Chinese girl, fresh delicate clear face, fair skin, large bright earnest eyes behind black-framed glasses, straight black shoulder-length hair, slender petite build",
+          "ethnicity": "rural Han Chinese, contemporary mainland countryside",
+          "physique": "petite slender, slightly underfed, narrow shoulders",
+          "aura": "stubborn, clear-eyed, earnest country girl who refuses to give up",
+          "face": {
+            "cheekbones": "soft rounded youthful cheeks, gentle jaw",
+            "eyes": "large bright earnest dark-brown eyes, single/light-fold East Asian eye shape behind black-framed glasses, NOT round Western double-fold",
+            "hair": "jet black, straight, healthy but plain",
+            "skin": "fair clear young skin, faint natural country flush, real pores",
+            "nose": "small soft straight nose bridge",
+            "brows": "natural soft dark brows, ungroomed",
+            "skin_detail": "no makeup, true-to-life teenage skin, faint sun on cheeks"
+          },
+          "scars": "none",
+          "hair": "shoulder-length straight black hair, simple, sometimes tucked behind ear; no styling product",
+          "headwear": "none; black-framed glasses; face fully visible",
+          "upper": "faded modest thin knit top or plain t-shirt, threadbare but clean, humble rural-student wear",
+          "lower": "simple loose cheap trousers; worn old little white canvas sneakers caked with mud",
+          "mod": "none",
+          "weapons": { "primary": "none", "secondary": "none", "ranged": "none" },
+          "palette": "muted faded earth tones — washed grey-blue top, dull beige trousers, mud-stained off-white shoes; warm low-saturation country palette",
+          "pose": "natural relaxed standing, arms at sides or one hand lightly adjusting glasses; NOT fashion-model, NOT seductive",
+          "lighting": "soft warm natural studio lighting, gentle fill, even flattering exposure, true-to-life skin, no harsh noir rim",
+          "style_ref": "contemporary Chinese realist youth drama; photoreal teenage country girl, NOT idol/glam",
+          "anti": ["欧美脸/double-fold Western eyes", "K-pop偶像脸", "网红整容脸", "动漫/cosplay脸", "时装模特纤瘦身材", "浓妆/精致美甲", "硬noir轮廓光"]
+        },
+        "parent": null,
+        "planned_episodes": ["第1集_绝望降临", "第2集_城市谋生", "第3集_全网爆红", "第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "char.su_father.default", "category": "character", "kind": "human",
+      "id": "su_father", "display_name": "苏父", "look": "default",
+      "ref_token": "@[char:su_father|look:default]", "status": "planned", "faction": "su_family",
+      "intent": {
+        "sheet_spec": {
+          "identity_anchor": "Chinese rural man in his late 40s, weathered sun-darkened deeply-wrinkled honest face, short greying thinning black hair, grey stubble, thin wiry stooped build, lame in one leg",
+          "ethnicity": "rural Han Chinese peasant, contemporary mainland countryside",
+          "physique": "thin wiry slightly stooped, frail but sinewy from labor, favors one leg (lame)",
+          "aura": "weathered, honest, silently enduring, worn down by hardship yet dignified",
+          "face": {
+            "cheekbones": "gaunt weathered prominent cheekbones",
+            "eyes": "deep-set tired honest dark eyes, heavy eye-bags",
+            "hair": "short greying black, thinning, rough-cut",
+            "skin": "dark sun-weathered deeply-wrinkled leathery skin, sun spots",
+            "nose": "ordinary weathered East-Asian nose",
+            "brows": "sparse greying brows",
+            "skin_detail": "deep wrinkles, sun damage, rough; grey stubble"
+          },
+          "scars": "calloused scarred cracked laboring hands (signature — daughter weeps at the sight)",
+          "hair": "short greying thinning black hair, plain rough-cut; grey stubble",
+          "headwear": "none",
+          "upper": "shabby worn patched faded loose work shirt, threadbare, sleeves pushed up showing thin sinewy forearms",
+          "lower": "rolled-up worn loose trousers, worn cloth shoes",
+          "mod": "none",
+          "weapons": { "primary": "none", "secondary": "none", "ranged": "none" },
+          "palette": "drab earthy poverty tones — faded grey-brown patched shirt, dust-worn trousers, dark weathered skin",
+          "pose": "standing humbly slightly stooped, weight on the good leg, hands at sides showing rough hands; sometimes a carrying-pole (扁担) resting against him",
+          "lighting": "soft warm natural studio lighting, gentle fill, true-to-life weathered skin, no harsh noir rim",
+          "style_ref": "contemporary Chinese realist rural drama; photoreal lame peasant, NOT young/handsome-idol",
+          "anti": ["欧美脸", "年轻/帅气偶像", "动漫脸", "肌肉硬汉身材", "干净体面", "硬noir轮廓光"]
+        },
+        "parent": null,
+        "planned_episodes": ["第1集_绝望降临", "第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "char.su_mother.default", "category": "character", "kind": "human",
+      "id": "su_mother", "display_name": "苏母", "look": "default",
+      "ref_token": "@[char:su_mother|look:default]", "status": "planned", "faction": "su_family",
+      "intent": {
+        "sheet_spec": {
+          "identity_anchor": "Chinese rural woman in her mid 40s, plain kind weather-worn tanned full face, black hair pulled back in a simple low bun, sturdy stout build",
+          "ethnicity": "rural Han Chinese, contemporary mainland countryside",
+          "physique": "sturdy stout broad, solid from farm labor",
+          "aura": "kind, plain, hardworking, weather-worn, sturdy and warm",
+          "face": {
+            "cheekbones": "full broad weathered face",
+            "eyes": "kind tired dark eyes, fine wrinkles",
+            "hair": "black with a few greys, pulled back",
+            "skin": "tanned weather-worn rural skin, sun lines",
+            "nose": "ordinary East-Asian nose",
+            "brows": "natural dark brows",
+            "skin_detail": "weathered careworn lines, no makeup"
+          },
+          "scars": "none",
+          "hair": "black hair in a simple low bun, a few grey strands, plain",
+          "headwear": "none",
+          "upper": "plain worn dark or small-floral homemaker blouse, a bit faded, with a cloth work apron over it",
+          "lower": "loose worn trousers, plain cloth shoes",
+          "mod": "none",
+          "weapons": { "primary": "none", "secondary": "none", "ranged": "none" },
+          "palette": "humble rural tones — faded dark-floral or navy blouse, drab apron, worn trousers; warm weathered skin",
+          "pose": "standing plainly, hands folded or wiping on apron, warm and humble; NOT posed/glamorous",
+          "lighting": "soft warm natural studio lighting, gentle fill, true-to-life skin, no harsh noir rim",
+          "style_ref": "contemporary Chinese realist rural drama; photoreal stout village mother, NOT young/glam",
+          "anti": ["欧美脸", "年轻/纤瘦/glam", "动漫脸", "浓妆", "硬noir轮廓光"]
+        },
+        "parent": null,
+        "planned_episodes": ["第1集_绝望降临", "第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "char.li_shu.default", "category": "character", "kind": "human",
+      "id": "li_shu", "display_name": "李叔", "look": "default",
+      "ref_token": "@[char:li_shu|look:default]", "status": "planned", "faction": "su_family",
+      "intent": {
+        "sheet_spec": {
+          "identity_anchor": "Chinese rural middle-aged man around 50, loud coarse sun-darkened stubbled broad face, short coarse greying-black messy hair, stocky thick build",
+          "ethnicity": "rural Han Chinese farmer, contemporary mainland countryside",
+          "physique": "stocky thick solid, a bit of a belly",
+          "aura": "loud, coarse, thick-skinned nosy village farmer / gossip",
+          "face": {
+            "cheekbones": "broad coarse stubbled jaw",
+            "eyes": "small shrewd dark eyes, crow's feet",
+            "hair": "short coarse greying-black, messy",
+            "skin": "dark sun-darkened weathered coarse skin",
+            "nose": "broad East-Asian nose",
+            "brows": "thick dark brows",
+            "skin_detail": "stubble, sun damage, coarse pores"
+          },
+          "scars": "none",
+          "hair": "short coarse greying-black messy hair; coarse stubble / 络腮胡茬",
+          "headwear": "none (optionally a worn cloth cap, face visible)",
+          "upper": "rough worn grimy rural shirt, sleeves rolled, sometimes half-unbuttoned",
+          "lower": "worn loose farmer trousers, worn shoes",
+          "mod": "none",
+          "weapons": { "primary": "none", "secondary": "none", "ranged": "none" },
+          "palette": "drab earthy farmer tones — grimy grey-brown shirt, dusty trousers, dark weathered skin",
+          "pose": "brash slouch, a hoe (锄头) carried over one shoulder, free hand on hip; NOT heroic/refined",
+          "lighting": "soft warm natural studio lighting, gentle fill, true-to-life skin, no harsh noir rim",
+          "style_ref": "contemporary Chinese realist rural drama; photoreal coarse farmer ~50",
+          "anti": ["欧美脸", "年轻/帅气", "动漫脸", "肌肉/精瘦身材", "硬noir轮廓光"]
+        },
+        "parent": null,
+        "planned_episodes": ["第1集_绝望降临"]
+      }
+    },
+    {
+      "asset_id": "char.lin_min.default", "category": "character", "kind": "human",
+      "id": "lin_min", "display_name": "林闵", "look": "default",
+      "ref_token": "@[char:lin_min|look:default]", "status": "planned", "faction": null,
+      "intent": {
+        "sheet_spec": {
+          "identity_anchor": "Chinese male college student around 19, pale thin handsome but gloomy face, dark brooding eyes, slightly messy black hair, tall lean build",
+          "ethnicity": "Han Chinese, contemporary mainland city college student",
+          "physique": "tall lean, slightly hunched, undernourished poor-student frame",
+          "aura": "gloomy, reserved, proud but struggling, quietly brooding",
+          "face": {
+            "cheekbones": "pale thin angular face, defined cheekbones",
+            "eyes": "dark brooding deep eyes, tired",
+            "hair": "black, slightly messy, a bit overgrown",
+            "skin": "pale indoor skin, faint shadows under eyes",
+            "nose": "straight East-Asian nose",
+            "brows": "dark brows, often furrowed",
+            "skin_detail": "young but worn, no makeup"
+          },
+          "scars": "none",
+          "hair": "slightly messy black hair, plain cheap cut",
+          "headwear": "none",
+          "upper": "plain modest tight-budget student clothes, a simple dark hoodie or thin jacket over a t-shirt",
+          "lower": "cheap jeans, worn sneakers",
+          "mod": "none",
+          "weapons": { "primary": "none", "secondary": "none", "ranged": "none" },
+          "palette": "muted dark cool tones — dark hoodie, faded jeans; cool low-saturation",
+          "pose": "guarded slouch, hands in pockets, reserved; NOT confident/glam",
+          "lighting": "soft natural lighting, true-to-life skin, mildly cool to match his gloom, no harsh noir rim",
+          "style_ref": "contemporary Chinese realist youth drama; photoreal poor college boy",
+          "anti": ["欧美脸", "K-pop偶像", "动漫脸", "时装模特", "浮夸造型"]
+        },
+        "parent": null,
+        "planned_episodes": ["第2集_城市谋生", "第3集_全网爆红"]
+      }
+    },
+    {
+      "asset_id": "char.madam_liang.default", "category": "character", "kind": "human",
+      "id": "madam_liang", "display_name": "梁女士", "look": "default",
+      "ref_token": "@[char:madam_liang|look:default]", "status": "planned", "faction": "liang_household",
+      "intent": {
+        "sheet_spec": {
+          "identity_anchor": "elegant wealthy Chinese woman in her 40s, refined well-maintained face, fair skin, sleek styled shoulder-length hair, slim graceful build",
+          "ethnicity": "Han Chinese, contemporary affluent urban",
+          "physique": "slim graceful, well-kept posture",
+          "aura": "elegant, refined, composed wealthy housewife with quiet authority",
+          "face": {
+            "cheekbones": "refined well-maintained features, smooth",
+            "eyes": "calm composed dark eyes, light tasteful makeup",
+            "hair": "sleek styled shoulder-length, salon-kept",
+            "skin": "fair well-cared smooth skin, age-appropriate",
+            "nose": "refined straight nose",
+            "brows": "neatly groomed brows",
+            "skin_detail": "tasteful light makeup, well-maintained 40s skin"
+          },
+          "scars": "none",
+          "hair": "sleek styled shoulder-length hair, salon-kept",
+          "headwear": "none",
+          "upper": "refined expensive home wear — a quality silk blouse or fine knit",
+          "lower": "tailored trousers; tasteful gold jewelry",
+          "mod": "none",
+          "weapons": { "primary": "none", "secondary": "none", "ranged": "none" },
+          "palette": "refined muted luxury tones — cream/taupe silk, soft neutrals, gold accents",
+          "pose": "graceful composed standing, poised; refined not seductive",
+          "lighting": "soft warm flattering natural light, clean affluent tone, no harsh noir rim",
+          "style_ref": "contemporary Chinese realist drama; photoreal elegant wealthy woman",
+          "anti": ["欧美脸", "网红整容脸", "动漫脸", "土气/廉价", "硬noir轮廓光"]
+        },
+        "parent": null,
+        "planned_episodes": ["第2集_城市谋生"]
+      }
+    },
+    {
+      "asset_id": "char.liang_jiajia.default", "category": "character", "kind": "human",
+      "id": "liang_jiajia", "display_name": "梁佳佳", "look": "default",
+      "ref_token": "@[char:liang_jiajia|look:default]", "status": "planned", "faction": "liang_household",
+      "intent": {
+        "sheet_spec": {
+          "identity_anchor": "rebellious Chinese teenage girl around 15-16, pretty sulky face, trendy tinted-dyed hair, slim build",
+          "ethnicity": "Han Chinese, contemporary affluent urban teen",
+          "physique": "slim teen, casual slouchy posture",
+          "aura": "rebellious, sulky, spoiled rich teenager",
+          "face": {
+            "cheekbones": "pretty youthful face",
+            "eyes": "sulky dark eyes, a touch of trendy teen makeup",
+            "hair": "trendy tinted/dyed hair (caramel/ash highlights)",
+            "skin": "fair young skin",
+            "nose": "small straight nose",
+            "brows": "trendy groomed brows",
+            "skin_detail": "light trendy makeup, young skin"
+          },
+          "scars": "none",
+          "hair": "trendy tinted-dyed hair, styled casual",
+          "headwear": "none",
+          "upper": "trendy rebellious teen outfit — oversized graphic hoodie or shirt",
+          "lower": "ripped jeans, sneakers, casual accessories",
+          "mod": "none",
+          "weapons": { "primary": "none", "secondary": "none", "ranged": "none" },
+          "palette": "trendy streetwear tones — graphic hoodie, washed denim, sneaker colors",
+          "pose": "slouchy defiant teen stance, arms crossed or on phone",
+          "lighting": "soft natural light, true-to-life skin, no harsh noir rim",
+          "style_ref": "contemporary Chinese realist drama; photoreal spoiled teen",
+          "anti": ["欧美脸", "K-pop偶像", "动漫脸", "成熟glam", "硬noir轮廓光"]
+        },
+        "parent": null,
+        "planned_episodes": ["第3集_全网爆红"]
+      }
+    },
+    {
+      "asset_id": "char.zhang_juan.default", "category": "character", "kind": "human",
+      "id": "zhang_juan", "display_name": "张娟", "look": "default",
+      "ref_token": "@[char:zhang_juan|look:default]", "status": "planned", "faction": null,
+      "intent": {
+        "sheet_spec": {
+          "identity_anchor": "Chinese young woman around 18, heavily made-up pretty face, dyed wavy hair, slim figure",
+          "ethnicity": "Han Chinese, contemporary, small-town show-off",
+          "physique": "slim figure, posed",
+          "aura": "flashy, vain, show-off, looks-down-on-others",
+          "face": {
+            "cheekbones": "pretty heavily-made-up face",
+            "eyes": "heavy eye makeup, false lashes",
+            "hair": "dyed wavy hair, styled",
+            "skin": "heavy foundation, glam finish",
+            "nose": "contoured nose",
+            "brows": "drawn-on bold brows",
+            "skin_detail": "heavy makeup, glossy glam"
+          },
+          "scars": "none",
+          "hair": "dyed wavy styled hair",
+          "headwear": "none",
+          "upper": "flashy gaudy show-off outfit — a tight fashionable dress",
+          "lower": "high heels; a conspicuous brand-name handbag, heavy accessories",
+          "mod": "none",
+          "weapons": { "primary": "none", "secondary": "none", "ranged": "none" },
+          "palette": "flashy saturated tones — bold dress color, gold/branded accessories",
+          "pose": "vain posed stance, showing off handbag",
+          "lighting": "soft natural light, true-to-life skin (glam makeup), no harsh noir rim",
+          "style_ref": "contemporary Chinese realist drama; photoreal vain show-off girl",
+          "anti": ["欧美脸", "动漫脸", "朴素/土气", "硬noir轮廓光"]
+        },
+        "parent": null,
+        "planned_episodes": ["第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "scene.rural_stone_path.dusk", "category": "scene",
+      "id": "rural_stone_path", "display_name": "乡间石板路·黄昏", "look": "dusk",
+      "ref_token": "@[scene:rural_stone_path|look:dusk]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a rural countryside stone-slab path covered with rotting leaves, winding through fields at dusk, warm golden backlit sunset, tranquil poor village outskirts",
+        "parent": null, "planned_episodes": ["第1集_绝望降临"]
+      }
+    },
+    {
+      "asset_id": "scene.riverside_woods.default", "category": "scene",
+      "id": "riverside_woods", "display_name": "小河边·红豆杉树林", "look": "default",
+      "ref_token": "@[scene:riverside_woods|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a stone path along a small river leading to a grove of yew (red-bean pine) trees at the water's tail, lush green countryside, soft natural daylight",
+        "parent": null, "planned_episodes": ["第1集_绝望降临"]
+      }
+    },
+    {
+      "asset_id": "scene.su_home.default", "category": "scene",
+      "id": "su_home", "display_name": "苏家小院·日", "look": "default",
+      "ref_token": "@[scene:su_home|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a poor rural family courtyard and house — mud-brick walls, a small yard with firewood, a humble living room and a bedroom whose window is covered with plastic sheeting instead of glass; modest impoverished countryside home in daylight",
+        "parent": null, "planned_episodes": ["第1集_绝望降临", "第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "scene.su_home.night", "category": "scene",
+      "id": "su_home", "display_name": "苏家客厅·夜", "look": "night",
+      "ref_token": "@[scene:su_home|look:night]", "status": "planned",
+      "intent": {
+        "spec_prompt": "the same poor rural family living room at night, warm dim household lamplight, cozy humble interior, bamboo-weaving tools in a corner",
+        "parent": "default", "planned_episodes": ["第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "scene.city_street_bookstore.default", "category": "scene",
+      "id": "city_street_bookstore", "display_name": "市区街道·新华书店门口", "look": "default",
+      "ref_token": "@[scene:city_street_bookstore|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a small-city street with a Xinhua Bookstore, concrete entrance steps, ordinary Chinese town streetscape, clear morning daylight",
+        "parent": null, "planned_episodes": ["第1集_绝望降临"]
+      }
+    },
+    {
+      "asset_id": "scene.upscale_mall.default", "category": "scene",
+      "id": "upscale_mall", "display_name": "高档商场·金店", "look": "default",
+      "ref_token": "@[scene:upscale_mall|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "an upscale shopping mall interior — bright polished floors, a men's clothing section and a glittering gold-jewelry store, modern affluent retail space",
+        "parent": null, "planned_episodes": ["第1集_绝望降临", "第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "scene.hospital_basement.default", "category": "scene",
+      "id": "hospital_basement", "display_name": "医院地下室·走廊·日", "look": "default",
+      "ref_token": "@[scene:hospital_basement|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a dim hospital basement and corridor used as cheap lodging, bare utilitarian concrete walls, exposed pipes, simple beds and a corridor desk, cool fluorescent light, daytime",
+        "parent": null, "planned_episodes": ["第2集_城市谋生"]
+      }
+    },
+    {
+      "asset_id": "scene.hospital_basement.night", "category": "scene",
+      "id": "hospital_basement", "display_name": "医院地下室·走廊·夜", "look": "night",
+      "ref_token": "@[scene:hospital_basement|look:night]", "status": "planned",
+      "intent": {
+        "spec_prompt": "the same hospital basement corridor at night, dim sparse lighting, a single warm desk-lamp glow, quiet and shadowed",
+        "parent": "default", "planned_episodes": ["第3集_全网爆红"]
+      }
+    },
+    {
+      "asset_id": "scene.liang_home.default", "category": "scene",
+      "id": "liang_home", "display_name": "梁家豪华公寓·书房", "look": "default",
+      "ref_token": "@[scene:liang_home|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a luxurious modern apartment interior — a spacious living room and an elegant study with bookshelves, refined expensive furnishings, warm afternoon light",
+        "parent": null, "planned_episodes": ["第2集_城市谋生", "第3集_全网爆红"]
+      }
+    },
+    {
+      "asset_id": "scene.village_entrance.default", "category": "scene",
+      "id": "village_entrance", "display_name": "村口", "look": "default",
+      "ref_token": "@[scene:village_entrance|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "the entrance of a poor Chinese rural village — a dirt road, mud-brick and stone walls, a few simple farmhouses, scrubby trees and fields, warm daylight, tranquil but poor",
+        "parent": null, "planned_episodes": ["第1集_绝望降临"]
+      }
+    },
+    {
+      "asset_id": "scene.city_roadside.default", "category": "scene",
+      "id": "city_roadside", "display_name": "市区马路边·日", "look": "default",
+      "ref_token": "@[scene:city_roadside|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "an ordinary city roadside and street, pavement and passing traffic, pedestrians, plain daytime urban setting",
+        "parent": null, "planned_episodes": ["第1集_绝望降临", "第2集_城市谋生"]
+      }
+    },
+    {
+      "asset_id": "scene.city_library.default", "category": "scene",
+      "id": "city_library", "display_name": "市图书馆·阅览室", "look": "default",
+      "ref_token": "@[scene:city_library|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a city public library reading room, long wooden desks, rows of bookshelves, bright morning light streaming through tall windows",
+        "parent": null, "planned_episodes": ["第3集_全网爆红"]
+      }
+    },
+    {
+      "asset_id": "scene.village_bus.default", "category": "scene",
+      "id": "village_bus", "display_name": "回村中巴车·车厢", "look": "default",
+      "ref_token": "@[scene:village_bus|look:default]", "status": "planned",
+      "intent": {
+        "spec_prompt": "the crowded interior of a rural minibus, worn seats packed with village passengers and luggage, daylight through dusty windows",
+        "parent": null, "planned_episodes": ["第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "prop.system_hud", "category": "prop",
+      "id": "system_hud", "display_name": "进步系统面板",
+      "ref_token": "@[prop:system_hud]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a semi-transparent futuristic 'Progress System' HUD overlay — glowing golden-and-cyan holographic readouts of step-count and money balance with CHINESE labels 步数/余额/元, floating sci-fi UI alerts, a sleek tech interface superimposed on the real scene; not a physical object but a recurring magical overlay",
+        "parent": null, "planned_episodes": ["第1集_绝望降临", "第2集_城市谋生", "第3集_全网爆红", "第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "prop.white_sneakers", "category": "prop",
+      "id": "white_sneakers", "display_name": "旧小白鞋",
+      "ref_token": "@[prop:white_sneakers]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a pair of old worn little white canvas sneakers caked with mud, the signature walk-to-earn shoes, hero close-up prop",
+        "parent": null, "planned_episodes": ["第1集_绝望降临"]
+      }
+    },
+    {
+      "asset_id": "prop.bamboo_basket", "category": "prop",
+      "id": "bamboo_basket", "display_name": "竹簸箕",
+      "ref_token": "@[prop:bamboo_basket]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a hand-woven bamboo winnowing basket (簸箕) woven from green bamboo strips — from a rough rustic one to a flawless tight masterpiece smooth enough to hold water",
+        "parent": null, "planned_episodes": ["第1集_绝望降临", "第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "prop.bamboo_handbag", "category": "prop",
+      "id": "bamboo_handbag", "display_name": "青色小竹包",
+      "ref_token": "@[prop:bamboo_handbag]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a delicate exquisite small green bamboo woven handbag, finely crafted, the viral handmade item a rich woman offers to buy",
+        "parent": null, "planned_episodes": ["第3集_全网爆红", "第4集_衣锦还乡"]
+      }
+    },
+    {
+      "asset_id": "prop.smartphone", "category": "prop",
+      "id": "smartphone", "display_name": "新手机",
+      "ref_token": "@[prop:smartphone]", "status": "planned",
+      "intent": {
+        "spec_prompt": "a brand-new smartphone in its box, the gift the father buys his daughter, later used to receive calls",
+        "parent": null, "planned_episodes": ["第1集_绝望降临", "第4集_衣锦还乡"]
+      }
+    }
+  ]
+}
